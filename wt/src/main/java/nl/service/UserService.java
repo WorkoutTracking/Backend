@@ -1,5 +1,6 @@
 package nl.service;
 
+import io.quarkus.elytron.security.common.BcryptUtil;
 import nl.domain.UserAccount;
 import nl.repository.UserRepository;
 
@@ -23,6 +24,7 @@ public class UserService {
     public UserAccount findUserById(UUID id){ return userRepository.find("id", id).firstResult();}
 
     public UserAccount addUser(UserAccount userAccount) {
+        userAccount.setPassword(BcryptUtil.bcryptHash(userAccount.getPassword()));
         userRepository.persist(userAccount);
         return userAccount;
     }

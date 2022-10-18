@@ -14,7 +14,7 @@ public class Workout {
     @GeneratedValue(generator = "UUID")
     private UUID id;
     @ManyToOne
-    private UserAccount user_id;
+    private UserAccount user;
     private String name;
     @CreationTimestamp
     private LocalDateTime created_at;

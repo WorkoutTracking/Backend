@@ -22,7 +22,7 @@ public class WorkoutService {
     }
 
     public Workout addWorkout(Workout workout) {
-        System.out.println(workout);
+
         if (workout == null){
             throw new IllegalArgumentException();
         }

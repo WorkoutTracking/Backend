@@ -7,6 +7,7 @@ import java.net.URI;
 import java.util.List;
 import java.util.UUID;
 
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
@@ -23,12 +24,14 @@ public class UserResource {
     }
 
     @GET
+    @RolesAllowed("admin")
     @Produces(MediaType.APPLICATION_JSON)
     public List<UserAccount> allUsers(){
         return userService.allUsers();
     }
 
     @GET
+    @RolesAllowed("admin")
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getById(@PathParam("id") UUID id){

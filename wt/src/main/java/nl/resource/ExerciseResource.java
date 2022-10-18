@@ -3,6 +3,7 @@ package nl.resource;
 import nl.domain.Exercise;
 import nl.service.ExerciseService;
 
+import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.GET;
@@ -23,12 +24,14 @@ public class ExerciseResource {
 
     }
     @GET
+    @RolesAllowed("user")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Exercise> allExercises(){
         return exerciseService.allExercises();
     }
 
     @POST
+    @RolesAllowed("user")
     @Transactional
     public Response addExercise(Exercise exercise){
         Exercise exerciseWithId = exerciseService.addExercise(exercise);
