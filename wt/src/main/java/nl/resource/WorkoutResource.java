@@ -1,6 +1,5 @@
 package nl.resource;
 
-import nl.domain.User;
 import nl.domain.Workout;
 import nl.service.WorkoutService;
 
@@ -36,6 +35,6 @@ public class WorkoutResource {
     @Transactional
     public Response addWorkout(Workout workout) {
         Workout workoutWithId = workoutService.addWorkout(workout);
-        return Response.created(URI.create("/api/users" + workoutWithId.getId())).build();
+        return Response.created(URI.create("/api/workouts/" + workoutWithId.getId())).build();
     }
 }

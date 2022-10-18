@@ -1,6 +1,5 @@
 package nl.service;
 
-import nl.domain.User;
 import nl.domain.Workout;
 import nl.repository.WorkoutRepository;
 
@@ -23,6 +22,10 @@ public class WorkoutService {
     }
 
     public Workout addWorkout(Workout workout) {
+        System.out.println(workout);
+        if (workout == null){
+            throw new IllegalArgumentException();
+        }
         workoutRepository.persist(workout);
         return workout;
     }

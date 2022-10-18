@@ -1,11 +1,12 @@
 package nl.service;
 
-import nl.domain.User;
+import nl.domain.UserAccount;
 import nl.repository.UserRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.util.List;
+import java.util.UUID;
 
 @ApplicationScoped
 public class UserService {
@@ -15,12 +16,14 @@ public class UserService {
     public UserService() {
     }
 
-    public List<User> allUsers() {
+    public List<UserAccount> allUsers() {
         return  userRepository.listAll();
     }
 
-    public User addUser(User user) {
-        userRepository.persist(user);
-        return user;
+    public UserAccount findUserById(UUID id){ return userRepository.find("id", id).firstResult();}
+
+    public UserAccount addUser(UserAccount userAccount) {
+        userRepository.persist(userAccount);
+        return userAccount;
     }
 }

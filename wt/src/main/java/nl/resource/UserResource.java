@@ -1,18 +1,15 @@
 package nl.resource;
 
-import nl.domain.User;
+import nl.domain.UserAccount;
 import nl.service.UserService;
 
 import java.net.URI;
 import java.util.List;
+import java.util.UUID;
 
-import javax.enterprise.context.control.ActivateRequestContext;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
@@ -27,14 +24,27 @@ public class UserResource {
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<User> allUsers(){
+    public List<UserAccount> allUsers(){
         return userService.allUsers();
+    }
+
+    @GET
+    @Path("{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getById(@PathParam("id") UUID id){
+        UserAccount user = userService.findUserById(id);
+        if(user == null) {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+        else {
+            return Response.ok(user).build();
+        }
     }
 
     @POST
     @Transactional
-    public Response addUser(User user) {
-        User userWithId = userService.addUser(user);
-        return Response.created(URI.create("/api/users" + userWithId.getId())).build();
+    public Response addUser(UserAccount userAccount) {
+        UserAccount userAccountWithId = userService.addUser(userAccount);
+        return Response.created(URI.create("/api/users/" + userAccountWithId.getId())).build();
     }
 }

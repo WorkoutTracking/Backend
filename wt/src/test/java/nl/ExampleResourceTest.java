@@ -18,4 +18,9 @@ public class ExampleResourceTest {
                 .body(is("Hello from RESTEasy Reactive"));
     }
 
+    @Test
+    public void test(){
+
+    }
+
 }

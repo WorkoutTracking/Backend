@@ -1,28 +1,27 @@
 package nl.domain;
 
-import io.vertx.ext.auth.User;
 import org.hibernate.annotations.CreationTimestamp;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.time.LocalDateTime;
-import java.util.Set;
 import java.util.UUID;
 
 @Entity
-public class Workout {
+public class Exercise {
+
     @Id
     @GeneratedValue(generator = "UUID")
     private UUID id;
-    @ManyToOne
-    private UserAccount user_id;
     private String name;
     @CreationTimestamp
     private LocalDateTime created_at;
 
-    public Workout() {
+    public Exercise(){
     }
 
-    public Workout(String name) {
+    public Exercise(String name) {
         this.name = name;
     }
 
@@ -38,5 +37,4 @@ public class Workout {
     public void setName(String name) {
         this.name = name;
     }
-
 }
