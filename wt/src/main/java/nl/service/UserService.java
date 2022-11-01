@@ -24,7 +24,6 @@ public class UserService {
     public UserAccount findUserById(UUID id){ return userRepository.find("id", id).firstResult();}
 
     public UserAccount addUser(UserAccount userAccount) {
-        userAccount.setPassword(BcryptUtil.bcryptHash(userAccount.getPassword()));
         userRepository.persist(userAccount);
         return userAccount;
     }

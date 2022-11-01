@@ -14,17 +14,12 @@ import java.util.Set;
 import java.util.UUID;
 
 @Entity
-@UserDefinition
 public class UserAccount {
     @Id
     @GeneratedValue(generator = "UUID")
     private UUID id;
-    @Username
-    private String username;
     private String name;
     private String email;
-    @Password
-    private String password;
     @Roles
     private String role = "admin";
     @CreationTimestamp
@@ -35,19 +30,14 @@ public class UserAccount {
     public UserAccount() {
     }
 
-    public UserAccount(String username, String name, String email, String password, String role) {
-        this.username = username;
+    public UserAccount(String name, String email, String role) {
         this.name = name;
         this.email = email;
-        this.password = BcryptUtil.bcryptHash(password);
         this.role = role;
     }
 
     public UUID getId() {
         return id;
-    }
-    public String getUsername() {
-        return username;
     }
     public String getName() {
         return name;
@@ -58,17 +48,10 @@ public class UserAccount {
     public String getEmail() {
         return email;
     }
-    public String getPassword() {
-        return password;
-    }
-    public void setUsername(String username) {
-        this.username = username;
-    }
     public void setName(String name) {
         this.name = name;
     }
     public void setEmail(String email) {
         this.email = email;
     }
-    public void setPassword(String password) { this.password = BcryptUtil.bcryptHash(password); }
 }

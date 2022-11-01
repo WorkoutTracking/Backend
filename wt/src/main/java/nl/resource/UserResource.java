@@ -24,14 +24,12 @@ public class UserResource {
     }
 
     @GET
-    @RolesAllowed("admin")
     @Produces(MediaType.APPLICATION_JSON)
     public List<UserAccount> allUsers(){
         return userService.allUsers();
     }
 
     @GET
-    @RolesAllowed("admin")
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getById(@PathParam("id") UUID id){

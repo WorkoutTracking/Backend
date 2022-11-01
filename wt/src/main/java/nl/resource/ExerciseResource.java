@@ -24,14 +24,12 @@ public class ExerciseResource {
 
     }
     @GET
-    @RolesAllowed("user")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Exercise> allExercises(){
         return exerciseService.allExercises();
     }
 
     @POST
-    @RolesAllowed("user")
     @Transactional
     public Response addExercise(Exercise exercise){
         Exercise exerciseWithId = exerciseService.addExercise(exercise);

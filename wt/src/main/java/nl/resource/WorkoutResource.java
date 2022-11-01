@@ -27,14 +27,12 @@ public class WorkoutResource {
     }
 
     @GET
-    @RolesAllowed("user")
     @Produces(MediaType.APPLICATION_JSON)
     public List<Workout> allWorkouts(){
         return workoutService.allWorkouts();
     }
 
     @POST
-    @RolesAllowed("user")
     @Transactional
     public Response addWorkout(Workout workout) {
         Workout workoutWithId = workoutService.addWorkout(workout);
