@@ -9,6 +9,7 @@ repositories {
 }
 
 dependencies {
+    implementation 'io.quarkus:quarkus-jdbc-h2:2.13.1.Final'
     implementation 'io.quarkus:quarkus-security-jpa'
     implementation 'io.quarkus:quarkus-jdbc-mysql'
     implementation enforcedPlatform("${quarkusPlatformGroupId}:${quarkusPlatformArtifactId}:${quarkusPlatformVersion}")
