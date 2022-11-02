@@ -7,7 +7,6 @@ import org.jboss.resteasy.reactive.RestResponse.StatusCode;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.is;
 
 @QuarkusTest
 @TestHTTPEndpoint(WorkoutResource.class)
