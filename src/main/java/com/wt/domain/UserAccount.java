@@ -1,14 +1,12 @@
-package nl.domain;
+package com.wt.domain;
 
-import io.quarkus.elytron.security.common.BcryptUtil;
-import io.quarkus.security.jpa.Password;
 import io.quarkus.security.jpa.Roles;
-import io.quarkus.security.jpa.UserDefinition;
-import io.quarkus.security.jpa.Username;
 import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.jdbc.Work;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import java.time.LocalDateTime;
 import java.util.Set;
 import java.util.UUID;

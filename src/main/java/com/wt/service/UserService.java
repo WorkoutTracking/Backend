@@ -1,8 +1,7 @@
-package nl.service;
+package com.wt.service;
 
-import io.quarkus.elytron.security.common.BcryptUtil;
-import nl.domain.UserAccount;
-import nl.repository.UserRepository;
+import com.wt.domain.UserAccount;
+import com.wt.repository.UserRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;

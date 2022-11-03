@@ -5,19 +5,19 @@
       <profile name="Gradle Imported" enabled="true">
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-panache-common/2.13.0.Final/9bee8169cd7b57cf37d468380c8162a2999eed49/quarkus-panache-common-2.13.0.Final.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-arc/2.13.0.Final/ec357e60e99b2a6fc4233acf8c42c55f538fca63/quarkus-arc-2.13.0.Final.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-core/2.13.0.Final/843fe168ff377ab1478eff33f01d97231c7f5074/quarkus-core-2.13.0.Final.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus.arc/arc/2.13.0.Final/9bcd0d647b61698e6f5d54fb34765623313e21bd/arc-2.13.0.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-panache-common/2.13.3.Final/83ac805009f7f98bfa7ed89336c05c5e36d9c1ed/quarkus-panache-common-2.13.3.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-arc/2.13.3.Final/12069f49479aa0edb588bd8c2fe142f0a35cd43e/quarkus-arc-2.13.3.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-core/2.13.3.Final/f0db09bb598dfd83e57f9f77f449748895228421/quarkus-core-2.13.3.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus.arc/arc/2.13.3.Final/d2f575477174d456bdaf05eac1797a9c5e606451/arc-2.13.3.Final.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.enterprise/jakarta.enterprise.cdi-api/2.0.2/58f497f362cd19c2f8842d75c491d270f0600e7f/jakarta.enterprise.cdi-api-2.0.2.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.interceptor/jakarta.interceptor-api/1.2.5/20cbde692c555692ca835fb6ecb4a8c95acbe6e0/jakarta.interceptor-api-1.2.5.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.annotation/jakarta.annotation-api/1.3.5/59eb84ee0d616332ff44aba065f3888cf002cd2d/jakarta.annotation-api-1.3.5.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.inject/jakarta.inject-api/1.0/93164437046e06b4876e069b8e7a321a02f10a2d/jakarta.inject-api-1.0.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-ide-launcher/2.13.0.Final/4465f5d84475a57be2d0a179777b7ed9696cd005/quarkus-ide-launcher-2.13.0.Final.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-development-mode-spi/2.13.0.Final/d6215de73d44bfec277dc6a466e03456d47b752a/quarkus-development-mode-spi-2.13.0.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-ide-launcher/2.13.3.Final/9b86d4e9118afa0934435542c1ee2db95575db11/quarkus-ide-launcher-2.13.3.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-development-mode-spi/2.13.3.Final/cff70cda75221d767fb2a301d192a9564fcdcefa/quarkus-development-mode-spi-2.13.3.Final.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye.config/smallrye-config/2.12.0/48454dd9f327335a04f69779eae3aaea8cc282e5/smallrye-config-2.12.0.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.jboss.threads/jboss-threads/3.4.3.Final/2433a04e5a0f8982454a2bbe2700ee272a3a71c2/jboss-threads-3.4.3.Final.jar" />
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-bootstrap-runner/2.13.0.Final/11fb35034dfb4cbd3c8118ef0e8be663bc6e7570/quarkus-bootstrap-runner-2.13.0.Final.jar" />
+          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.quarkus/quarkus-bootstrap-runner/2.13.3.Final/b9ddb7527b8683881a147ee1498270235649c5bb/quarkus-bootstrap-runner-2.13.3.Final.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye.config/smallrye-config-core/2.12.0/c1488e7baf36578ac0cc2a49f4f55d1d0cbe58aa/smallrye-config-core-2.12.0.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye.common/smallrye-common-expression/1.13.1/4058b1d1f186d30f62686c9520a1d131c86a143e/smallrye-common-expression-1.13.1.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.smallrye.common/smallrye-common-function/1.13.1/9fba3dc08283cd93a5cf83c3c69b5469a6a232d1/smallrye-common-function-1.13.1.jar" />
@@ -44,9 +44,9 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.ow2.asm/asm/9.3/8e6300ef51c1d801a7ed62d07cd221aca3a90640/asm-9.3.jar" />
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.reactivestreams/reactive-streams/1.0.3/d9fb7a7926ffa635b3dcaa5049fb2bfa25b3e7d0/reactive-streams-1.0.3.jar" />
         </processorPath>
-        <module name="nl.wt.main" />
+        <module name="workouttracking.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="17" />
+    <bytecodeTargetLevel target="11" />
   </component>
 </project>

@@ -1,7 +1,7 @@
-package nl.service;
+package com.wt.service;
 
-import nl.domain.Exercise;
-import nl.repository.ExerciseRepository;
+import com.wt.domain.Exercise;
+import com.wt.repository.ExerciseRepository;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
