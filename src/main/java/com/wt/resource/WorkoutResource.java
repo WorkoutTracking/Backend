@@ -1,5 +1,6 @@
 package com.wt.resource;
 
+import com.wt.domain.UserAccount;
 import com.wt.domain.Workout;
 import com.wt.service.WorkoutService;
 
@@ -10,6 +11,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.net.URI;
 import java.util.List;
+import java.util.UUID;
 
 @Path("/api/workouts")
 @Produces(MediaType.APPLICATION_JSON)
@@ -27,6 +29,18 @@ public class WorkoutResource {
     @GET
     public List<Workout> allWorkouts(){
         return workoutService.allWorkouts();
+    }
+
+    @GET
+    @Path("/{id}")
+    public Response getById(@PathParam("id") UUID id){
+        Workout workout = workoutService.findWorkoutById(id);
+        if(workout == null) {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+        else {
+            return Response.ok(workout).build();
+        }
     }
 
     @POST
