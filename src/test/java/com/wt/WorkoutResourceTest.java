@@ -17,8 +17,7 @@ public class WorkoutResourceTest {
         given()
                 .when().get()
                 .then()
-                .statusCode(RestResponse.StatusCode.INTERNAL_SERVER_ERROR);
-
+                .statusCode(RestResponse.StatusCode.OK);
     }
 
 }
