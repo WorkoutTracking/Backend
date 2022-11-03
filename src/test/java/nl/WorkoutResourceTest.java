@@ -18,7 +18,7 @@ public class WorkoutResourceTest {
     public void Test_Workout_Endpoint() {
         given()
                 .when().get()
-                .then().contentType(ContentType.JSON)
+                .then()
                 .statusCode(StatusCode.OK);
     }
 }
