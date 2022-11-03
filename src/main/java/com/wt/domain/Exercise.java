@@ -1,4 +1,4 @@
-package nl.domain;
+package com.wt.domain;
 
 import org.hibernate.annotations.CreationTimestamp;
 

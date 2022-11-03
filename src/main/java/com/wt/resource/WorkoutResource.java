@@ -1,9 +1,8 @@
-package nl.resource;
+package com.wt.resource;
 
-import nl.domain.Workout;
-import nl.service.WorkoutService;
+import com.wt.domain.Workout;
+import com.wt.service.WorkoutService;
 
-import javax.annotation.security.RolesAllowed;
 import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;

@@ -10,11 +10,11 @@
 #
 # Then, build the image with:
 #
-# docker build -f src/main/docker/Dockerfile.native-micro -t quarkus/wt .
+# docker build -f src/main/docker/Dockerfile.native-micro -t quarkus/workouttracking .
 #
 # Then run the container using:
 #
-# docker run -i --rm -p 8080:8080 quarkus/wt
+# docker run -i --rm -p 8080:8080 quarkus/workouttracking
 #
 ###
 FROM quay.io/quarkus/quarkus-micro-image:1.0
