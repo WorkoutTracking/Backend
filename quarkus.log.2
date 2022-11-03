@@ -1,5 +1,616 @@
-2022-11-03 10:50:28,887 laptop-ruo9ejtg workouttracking-dev.jar[21908] INFO  [io.quarkus] (Quarkus Main Thread) workouttracking 1.0-SNAPSHOT on JVM (powered by Quarkus 2.13.3.Final) started in 3.606s. Listening on: http://localhost:8080
-2022-11-03 10:50:28,889 laptop-ruo9ejtg workouttracking-dev.jar[21908] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
-2022-11-03 10:50:28,889 laptop-ruo9ejtg workouttracking-dev.jar[21908] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, elasticsearch-rest-client, hibernate-orm, hibernate-orm-panache, hibernate-orm-rest-data-panache, jdbc-h2, jdbc-postgresql, narayana-jta, resteasy-reactive, resteasy-reactive-jackson, resteasy-reactive-links, security, security-jpa, smallrye-context-propagation, vertx]
-2022-11-03 10:53:22,779 laptop-ruo9ejtg workouttracking-dev.jar[21908] WARNING [org.aes.rea.ter.imp.AbstractWindowsTerminal] (Shutdown thread) Failed to write out.
-2022-11-03 10:53:22,778 laptop-ruo9ejtg workouttracking-dev.jar[21908] INFO  [io.quarkus] (Shutdown thread) workouttracking stopped in 0.024s
+2022-11-03 13:22:50,497 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Quarkus Main Thread) workouttracking 1.0-SNAPSHOT on JVM (powered by Quarkus 2.13.3.Final) started in 17.443s. Listening on: http://localhost:8080
+2022-11-03 13:22:50,498 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2022-11-03 13:22:50,498 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cdi, elasticsearch-rest-client, hibernate-orm, hibernate-orm-panache, hibernate-orm-rest-data-panache, jdbc-h2, jdbc-postgresql, narayana-jta, resteasy-reactive, resteasy-reactive-jackson, resteasy-reactive-links, security, security-jpa, smallrye-context-propagation, vertx]
+2022-11-03 13:22:55,557 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [org.tes.doc.DockerClientProviderStrategy] (build-54) Loaded org.testcontainers.dockerclient.NpipeSocketClientProviderStrategy from ~/.testcontainers.properties, will try it first
+2022-11-03 13:22:55,873 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.qua.arc.pro.BeanProcessor] (build-33) Found unrecommended usage of private members (use package-private instead) in application beans:
+	- @Inject field com.wt.resource.ExerciseResource#exerciseService,
+	- @Inject field com.wt.resource.WorkoutResource#workoutService,
+	- @Inject field com.wt.resource.UserResource#userService
+2022-11-03 13:22:56,065 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [org.tes.doc.DockerClientProviderStrategy] (build-54) Found Docker environment with local Npipe socket (npipe:////./pipe/docker_engine)
+2022-11-03 13:22:56,069 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [org.tes.DockerClientFactory] (build-54) Docker host IP address is localhost
+2022-11-03 13:22:56,090 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [org.tes.DockerClientFactory] (build-54) Connected to docker: 
+  Server Version: 20.10.20
+  API Version: 1.41
+  Operating System: Docker Desktop
+  Total Memory: 7846 MB
+2022-11-03 13:22:56,102 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [org.tes.uti.ImageNameSubstitutor] (build-54) Image name substitution will be performed by: DefaultImageNameSubstitutor (composite of 'ConfigurationFileImageNameSubstitutor' and 'PrefixingImageNameSubstitutor')
+2022-11-03 13:22:56,117 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.3.3]] (build-54) Creating container for image: testcontainers/ryuk:0.3.3
+2022-11-03 13:22:56,395 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.3.3]] (build-54) Container testcontainers/ryuk:0.3.3 is starting: fe83988c3a406034505d60aeaf3bbd9a1d3094e43907744c2f1c50c545a9a81f
+2022-11-03 13:22:57,147 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.3.3]] (build-54) Container testcontainers/ryuk:0.3.3 started in PT1.0405944S
+2022-11-03 13:22:57,156 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [org.tes.uti.RyukResourceReaper] (build-54) Ryuk started - will monitor and terminate Testcontainers containers on JVM exit
+2022-11-03 13:22:57,157 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [org.tes.DockerClientFactory] (build-54) Checking the system...
+2022-11-03 13:22:57,158 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [org.tes.DockerClientFactory] (build-54) ?? Docker server version should be at least 1.6.0
+2022-11-03 13:22:57,161 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-54) Starting an elasticsearch container using [docker.elastic.co/elasticsearch/elasticsearch:7.17.0]
+2022-11-03 13:22:57,164 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-54) Creating container for image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
+2022-11-03 13:22:57,396 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [org.tes.uti.RegistryAuthLocator] (build-54) Credential helper/store (docker-credential-desktop) does not have credentials for docker.elastic.co
+2022-11-03 13:22:58,294 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-54) Container docker.elastic.co/elasticsearch/elasticsearch:7.17.0 is starting: df6f4fb1c4f97177f43077d123bf2c1e613359f4223699e78fe6d4967c56a183
+2022-11-03 13:23:08,603 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-54) Container docker.elastic.co/elasticsearch/elasticsearch:7.17.0 started in PT11.4386417S
+2022-11-03 13:23:08,605 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.qua.ela.res.com.dep.DevServicesElasticsearchProcessor] (build-54) Dev Services for Elasticsearch started. Other Quarkus applications in dev mode will find the server automatically. For Quarkus applications in production mode, you can connect to this by configuring your application to use localhost:65259
+2022-11-03 13:23:10,926 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) workouttracking 1.0-SNAPSHOT on JVM (powered by Quarkus 2.13.3.Final) started in 16.307s. Listening on: http://localhost:8081
+2022-11-03 13:23:10,927 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) Profile test activated. 
+2022-11-03 13:23:10,927 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) Installed features: [agroal, cdi, elasticsearch-rest-client, hibernate-orm, hibernate-orm-panache, hibernate-orm-rest-data-panache, jdbc-h2, jdbc-postgresql, narayana-jta, resteasy-reactive, resteasy-reactive-jackson, resteasy-reactive-links, security, security-jpa, smallrye-context-propagation, vertx]
+2022-11-03 13:23:13,049 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) workouttracking(test application) stopped in 0.028s
+2022-11-03 13:23:13,073 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.test] (Test runner thread) [39m==================== TEST REPORT #1[39m ====================
+2022-11-03 13:23:13,074 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.test] (Test runner thread) [91mTest WorkoutResourceTest#When_Get_Workout_By_Id_Then_Workout_Is_Found() failed 
+[39m: java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at com.wt.WorkoutResourceTest.When_Get_Workout_By_Id_Then_Workout_Is_Found(WorkoutResourceTest.java:42)
+
+2022-11-03 13:23:13,080 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.test] (Test runner thread) [39m>>>>>>>>>>>>>>>>>>>> [91mSummary:[39m <<<<<<<<<<<<<<<<<<<<
+com.wt.WorkoutResourceTest#When_Get_Workout_By_Id_Then_Workout_Is_Found(WorkoutResourceTest.java:42) [91mWorkoutResourceTest#When_Get_Workout_By_Id_Then_Workout_Is_Found()[39m 1 expectation failed.
+Expected status code <200> but was <404>.
+2022-11-03 13:23:13,085 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.test] (Test runner thread) [39m>>>>>>>>>>>>>>>>>>>> [91m1 TEST FAILED[39m <<<<<<<<<<<<<<<<<<<<
+2022-11-03 13:24:13,330 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:24:13,331 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:24:13,332 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:24:13,332 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:24:13,332 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:24:13,333 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:24:13,333 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:24:13,334 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:24:13,334 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:24:13,659 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.qua.arc.pro.BeanProcessor] (build-18) Found unrecommended usage of private members (use package-private instead) in application beans:
+	- @Inject field com.wt.resource.UserResource#userService,
+	- @Inject field com.wt.resource.ExerciseResource#exerciseService,
+	- @Inject field com.wt.resource.WorkoutResource#workoutService
+2022-11-03 13:24:14,250 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-6) Starting an elasticsearch container using [docker.elastic.co/elasticsearch/elasticsearch:7.17.0]
+2022-11-03 13:24:14,251 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-6) Creating container for image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
+2022-11-03 13:24:15,338 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-6) Container docker.elastic.co/elasticsearch/elasticsearch:7.17.0 is starting: 388fe5b347cc6b3cf735bdac17c08f40b0845bcf231020234642e9d2500b5614
+2022-11-03 13:24:26,167 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-6) Container docker.elastic.co/elasticsearch/elasticsearch:7.17.0 started in PT11.9152929S
+2022-11-03 13:24:26,169 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.qua.ela.res.com.dep.DevServicesElasticsearchProcessor] (build-6) Dev Services for Elasticsearch started. Other Quarkus applications in dev mode will find the server automatically. For Quarkus applications in production mode, you can connect to this by configuring your application to use localhost:56151
+2022-11-03 13:24:26,415 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) workouttracking 1.0-SNAPSHOT on JVM (powered by Quarkus 2.13.3.Final) started in 13.053s. Listening on: http://localhost:8081
+2022-11-03 13:24:26,416 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) Profile test activated. 
+2022-11-03 13:24:26,416 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) Installed features: [agroal, cdi, elasticsearch-rest-client, hibernate-orm, hibernate-orm-panache, hibernate-orm-rest-data-panache, jdbc-h2, jdbc-postgresql, narayana-jta, resteasy-reactive, resteasy-reactive-jackson, resteasy-reactive-links, security, security-jpa, smallrye-context-propagation, vertx]
+2022-11-03 13:24:26,520 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) workouttracking(test application) stopped in 0.008s
+2022-11-03 13:24:26,523 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.test] (Test runner thread) [39m==================== TEST REPORT #2[39m ====================
+2022-11-03 13:24:26,524 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.test] (Test runner thread) [91mTest WorkoutResourceTest#When_Get_Workout_By_Id_Then_Workout_Is_Found() failed 
+[39m: java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at com.wt.WorkoutResourceTest.When_Get_Workout_By_Id_Then_Workout_Is_Found(WorkoutResourceTest.java:42)
+
+2022-11-03 13:24:26,524 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.test] (Test runner thread) [39m>>>>>>>>>>>>>>>>>>>> [91mSummary:[39m <<<<<<<<<<<<<<<<<<<<
+com.wt.WorkoutResourceTest#When_Get_Workout_By_Id_Then_Workout_Is_Found(WorkoutResourceTest.java:42) [91mWorkoutResourceTest#When_Get_Workout_By_Id_Then_Workout_Is_Found()[39m 1 expectation failed.
+Expected status code <200> but was <404>.
+2022-11-03 13:24:26,526 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.test] (Test runner thread) [39m>>>>>>>>>>>>>>>>>>>> [91m1 TEST FAILED[39m <<<<<<<<<<<<<<<<<<<<
+2022-11-03 13:24:34,691 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:24:34,692 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:24:34,693 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:24:34,695 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:24:34,698 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:24:34,701 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:24:34,703 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:24:34,705 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:24:34,745 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:24:35,251 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.qua.arc.pro.BeanProcessor] (build-8) Found unrecommended usage of private members (use package-private instead) in application beans:
+	- @Inject field com.wt.resource.ExerciseResource#exerciseService,
+	- @Inject field com.wt.resource.WorkoutResource#workoutService,
+	- @Inject field com.wt.resource.UserResource#userService
+2022-11-03 13:24:35,932 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-21) Starting an elasticsearch container using [docker.elastic.co/elasticsearch/elasticsearch:7.17.0]
+2022-11-03 13:24:35,933 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-21) Creating container for image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
+2022-11-03 13:24:35,974 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-21) Container docker.elastic.co/elasticsearch/elasticsearch:7.17.0 is starting: 79216a012706d521d85f4b1e9b6035dfb1efd1bad274f36039ea43558a69ebf6
+2022-11-03 13:24:47,907 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-21) Container docker.elastic.co/elasticsearch/elasticsearch:7.17.0 started in PT11.9739519S
+2022-11-03 13:24:47,909 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.qua.ela.res.com.dep.DevServicesElasticsearchProcessor] (build-21) Dev Services for Elasticsearch started. Other Quarkus applications in dev mode will find the server automatically. For Quarkus applications in production mode, you can connect to this by configuring your application to use localhost:56162
+2022-11-03 13:24:48,178 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) workouttracking 1.0-SNAPSHOT on JVM (powered by Quarkus 2.13.3.Final) started in 13.255s. Listening on: http://localhost:8081
+2022-11-03 13:24:48,178 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) Profile test activated. 
+2022-11-03 13:24:48,179 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) Installed features: [agroal, cdi, elasticsearch-rest-client, hibernate-orm, hibernate-orm-panache, hibernate-orm-rest-data-panache, jdbc-h2, jdbc-postgresql, narayana-jta, resteasy-reactive, resteasy-reactive-jackson, resteasy-reactive-links, security, security-jpa, smallrye-context-propagation, vertx]
+2022-11-03 13:24:48,280 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) workouttracking(test application) stopped in 0.011s
+2022-11-03 13:24:48,285 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.test] (Test runner thread) [39m==================== TEST REPORT #3[39m ====================
+2022-11-03 13:24:48,286 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.test] (Test runner thread) [91mTest WorkoutResourceTest#When_Get_Workout_By_Id_Then_Workout_Is_Found() failed 
+[39m: java.lang.AssertionError: 1 expectation failed.
+Expected status code <200> but was <404>.
+
+	at io.restassured.internal.ValidatableResponseImpl.statusCode(ValidatableResponseImpl.groovy)
+	at com.wt.WorkoutResourceTest.When_Get_Workout_By_Id_Then_Workout_Is_Found(WorkoutResourceTest.java:42)
+
+2022-11-03 13:24:48,287 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.test] (Test runner thread) [39m>>>>>>>>>>>>>>>>>>>> [91mSummary:[39m <<<<<<<<<<<<<<<<<<<<
+com.wt.WorkoutResourceTest#When_Get_Workout_By_Id_Then_Workout_Is_Found(WorkoutResourceTest.java:42) [91mWorkoutResourceTest#When_Get_Workout_By_Id_Then_Workout_Is_Found()[39m 1 expectation failed.
+Expected status code <200> but was <404>.
+2022-11-03 13:24:48,288 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.test] (Test runner thread) [39m>>>>>>>>>>>>>>>>>>>> [91m1 TEST FAILED[39m <<<<<<<<<<<<<<<<<<<<
+2022-11-03 13:25:50,711 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:25:50,712 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:25:50,714 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:25:50,714 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:25:50,714 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:25:50,715 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:25:50,716 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:25:50,716 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:25:50,716 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:25:50,979 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.qua.arc.pro.BeanProcessor] (build-20) Found unrecommended usage of private members (use package-private instead) in application beans:
+	- @Inject field com.wt.resource.ExerciseResource#exerciseService,
+	- @Inject field com.wt.resource.UserResource#userService,
+	- @Inject field com.wt.resource.WorkoutResource#workoutService
+2022-11-03 13:25:51,584 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-21) Starting an elasticsearch container using [docker.elastic.co/elasticsearch/elasticsearch:7.17.0]
+2022-11-03 13:25:51,585 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-21) Creating container for image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
+2022-11-03 13:25:51,619 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-21) Container docker.elastic.co/elasticsearch/elasticsearch:7.17.0 is starting: 21e36a6c7093261da2e933c958b118f9e1afd3eab852603d7f8692f5ad989d0e
+2022-11-03 13:26:02,048 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-21) Container docker.elastic.co/elasticsearch/elasticsearch:7.17.0 started in PT10.4626945S
+2022-11-03 13:26:02,050 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.qua.ela.res.com.dep.DevServicesElasticsearchProcessor] (build-21) Dev Services for Elasticsearch started. Other Quarkus applications in dev mode will find the server automatically. For Quarkus applications in production mode, you can connect to this by configuring your application to use localhost:59378
+2022-11-03 13:26:02,256 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) workouttracking 1.0-SNAPSHOT on JVM (powered by Quarkus 2.13.3.Final) started in 11.516s. Listening on: http://localhost:8081
+2022-11-03 13:26:02,256 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) Profile test activated. 
+2022-11-03 13:26:02,256 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) Installed features: [agroal, cdi, elasticsearch-rest-client, hibernate-orm, hibernate-orm-panache, hibernate-orm-rest-data-panache, jdbc-h2, jdbc-postgresql, narayana-jta, resteasy-reactive, resteasy-reactive-jackson, resteasy-reactive-links, security, security-jpa, smallrye-context-propagation, vertx]
+2022-11-03 13:26:02,362 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) workouttracking(test application) stopped in 0.007s
+2022-11-03 13:26:02,365 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.qua.test] (Test runner thread) [32mAll tests are now passing[39m
+2022-11-03 13:26:15,685 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:15,686 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:15,686 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:15,687 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:15,687 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:15,687 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:15,688 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:15,688 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:15,688 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:15,690 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) no suitable method found for body(no arguments)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(org.hamcrest.Matcher<?>,org.hamcrest.Matcher<?>...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,java.util.List<io.restassured.specification.Argument>,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,org.hamcrest.Matcher<?>,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length), line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:16,678 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:16,678 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:16,680 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:16,681 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:16,682 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:16,683 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:16,685 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:16,689 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:16,690 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:16,692 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) no suitable method found for body(no arguments)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(org.hamcrest.Matcher<?>,org.hamcrest.Matcher<?>...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,java.util.List<io.restassured.specification.Argument>,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,org.hamcrest.Matcher<?>,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length), line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:17,694 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:17,696 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:17,697 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:17,698 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:17,699 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:17,700 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:17,700 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:17,701 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:17,702 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:17,704 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) no suitable method found for body(no arguments)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(org.hamcrest.Matcher<?>,org.hamcrest.Matcher<?>...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,java.util.List<io.restassured.specification.Argument>,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,org.hamcrest.Matcher<?>,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length), line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:18,683 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:18,684 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:18,686 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:18,687 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:18,688 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:18,689 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:18,689 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:18,690 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:18,692 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:18,694 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) no suitable method found for body(no arguments)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(org.hamcrest.Matcher<?>,org.hamcrest.Matcher<?>...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,java.util.List<io.restassured.specification.Argument>,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,org.hamcrest.Matcher<?>,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length), line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:19,695 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:19,697 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:19,698 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:19,700 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:19,702 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:19,704 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:19,705 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:19,706 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:19,708 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:19,709 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) no suitable method found for body(no arguments)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(org.hamcrest.Matcher<?>,org.hamcrest.Matcher<?>...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,java.util.List<io.restassured.specification.Argument>,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,org.hamcrest.Matcher<?>,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length), line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:20,702 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:20,705 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:20,706 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:20,707 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:20,708 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:20,708 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:20,710 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:20,711 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:20,711 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:20,714 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) no suitable method found for body(no arguments)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(org.hamcrest.Matcher<?>,org.hamcrest.Matcher<?>...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,java.util.List<io.restassured.specification.Argument>,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,org.hamcrest.Matcher<?>,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length), line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:21,700 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:21,700 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:21,701 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:21,702 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:21,703 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:21,704 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:21,705 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:21,706 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:21,707 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:21,710 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) no suitable method found for body(no arguments)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(org.hamcrest.Matcher<?>,org.hamcrest.Matcher<?>...) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,java.util.List<io.restassured.specification.Argument>,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,io.restassured.matcher.ResponseAwareMatcher<io.restassured.response.Response>) is not applicable
+      (actual and formal argument lists differ in length)
+    method io.restassured.response.ValidatableResponseOptions.body(java.lang.String,org.hamcrest.Matcher<?>,java.lang.Object...) is not applicable
+      (actual and formal argument lists differ in length), line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:22,695 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:22,697 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:22,698 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:22,699 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:22,700 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:22,700 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:22,701 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:22,702 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:22,703 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:22,704 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) no suitable method found for body(java.lang.String)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (argument mismatch; java.lang.String cannot be converted to java.util.List<io.restassured.specification.Argument>)
+    method io.restassured.response.ValidatableResponseOptions.body(org.hamcrest.Matcher<?>,org.hamcrest.Matcher<?>...) is not applicable
+      (argument mismatch; java.lang.String cannot be converted to org.hamcrest.Matcher<?>), line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:22,705 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) Some messages have been simplified; recompile with -Xdiags:verbose to get full output, line -1 in [unknown source]
+2022-11-03 13:26:23,700 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:23,702 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:23,703 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:23,704 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:23,705 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:23,706 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:23,707 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:23,708 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:23,710 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:23,710 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) no suitable method found for body(java.lang.String)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (argument mismatch; java.lang.String cannot be converted to java.util.List<io.restassured.specification.Argument>)
+    method io.restassured.response.ValidatableResponseOptions.body(org.hamcrest.Matcher<?>,org.hamcrest.Matcher<?>...) is not applicable
+      (argument mismatch; java.lang.String cannot be converted to org.hamcrest.Matcher<?>), line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:23,712 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) Some messages have been simplified; recompile with -Xdiags:verbose to get full output, line -1 in [unknown source]
+2022-11-03 13:26:24,701 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:24,701 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:24,702 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:24,703 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:24,703 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:24,704 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:24,705 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:24,705 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:24,706 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:24,707 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) no suitable method found for body(java.lang.String)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (argument mismatch; java.lang.String cannot be converted to java.util.List<io.restassured.specification.Argument>)
+    method io.restassured.response.ValidatableResponseOptions.body(org.hamcrest.Matcher<?>,org.hamcrest.Matcher<?>...) is not applicable
+      (argument mismatch; java.lang.String cannot be converted to org.hamcrest.Matcher<?>), line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:24,708 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) Some messages have been simplified; recompile with -Xdiags:verbose to get full output, line -1 in [unknown source]
+2022-11-03 13:26:25,723 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:25,724 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:25,725 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:25,726 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:25,727 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:25,728 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:25,729 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:25,730 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:25,730 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:25,731 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) no suitable method found for body(java.lang.String)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (argument mismatch; java.lang.String cannot be converted to java.util.List<io.restassured.specification.Argument>)
+    method io.restassured.response.ValidatableResponseOptions.body(org.hamcrest.Matcher<?>,org.hamcrest.Matcher<?>...) is not applicable
+      (argument mismatch; java.lang.String cannot be converted to org.hamcrest.Matcher<?>), line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:25,732 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) Some messages have been simplified; recompile with -Xdiags:verbose to get full output, line -1 in [unknown source]
+2022-11-03 13:26:26,710 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:26,711 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:26,711 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:26,712 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:26,712 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:26,713 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:26,714 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:26,715 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:26,716 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:26,716 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) no suitable method found for body(java.lang.String)
+    method io.restassured.response.ValidatableResponseOptions.body(java.util.List<io.restassured.specification.Argument>,org.hamcrest.Matcher,java.lang.Object...) is not applicable
+      (argument mismatch; java.lang.String cannot be converted to java.util.List<io.restassured.specification.Argument>)
+    method io.restassured.response.ValidatableResponseOptions.body(org.hamcrest.Matcher<?>,org.hamcrest.Matcher<?>...) is not applicable
+      (argument mismatch; java.lang.String cannot be converted to org.hamcrest.Matcher<?>), line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:26,717 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) Some messages have been simplified; recompile with -Xdiags:verbose to get full output, line -1 in [unknown source]
+2022-11-03 13:26:27,713 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:27,714 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:27,715 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:27,716 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:27,716 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:27,718 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:27,719 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:27,719 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:27,720 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:27,721 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) cannot find symbol
+  symbol:   variable hasItem
+  location: class com.wt.WorkoutResourceTest, line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:28,716 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:28,717 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:28,717 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:28,718 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:28,719 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:28,719 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:28,720 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:28,720 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:28,721 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:28,722 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) cannot find symbol
+  symbol:   variable hasItem
+  location: class com.wt.WorkoutResourceTest, line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:29,706 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:29,707 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:29,708 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:29,708 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:29,709 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:29,710 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:29,710 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:29,711 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:29,711 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:29,712 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) cannot find symbol
+  symbol:   variable hasItem
+  location: class com.wt.WorkoutResourceTest, line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:30,697 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:30,698 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:30,698 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:30,700 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:30,700 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:30,701 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:30,701 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:30,702 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:30,702 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:30,704 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) cannot find symbol
+  symbol:   variable hasItem
+  location: class com.wt.WorkoutResourceTest, line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:31,712 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:31,713 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:31,714 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:31,714 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:31,715 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:31,716 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:31,716 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:31,720 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:31,721 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:31,722 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) cannot find symbol
+  symbol:   variable hasItem
+  location: class com.wt.WorkoutResourceTest, line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:32,713 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:32,714 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:32,715 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:32,715 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:32,716 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:32,717 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:32,717 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:32,718 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:32,719 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:32,720 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) cannot find symbol
+  symbol:   variable hasItem
+  location: class com.wt.WorkoutResourceTest, line 43 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:33,723 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:33,723 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:33,724 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:33,725 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:33,725 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:33,726 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:33,727 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:33,728 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:33,728 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:33,730 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) no suitable method found for hasItem(no arguments)
+    method org.hamcrest.CoreMatchers.<T>hasItem(T) is not applicable
+      (cannot infer type-variable(s) T
+        (actual and formal argument lists differ in length))
+    method org.hamcrest.CoreMatchers.<T>hasItem(org.hamcrest.Matcher<? super T>) is not applicable
+      (cannot infer type-variable(s) T
+        (actual and formal argument lists differ in length)), line 44 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:34,712 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:34,713 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:34,714 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:34,714 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:34,715 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:34,716 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:34,717 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:34,717 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:34,718 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:34,720 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) no suitable method found for hasItem(no arguments)
+    method org.hamcrest.CoreMatchers.<T>hasItem(T) is not applicable
+      (cannot infer type-variable(s) T
+        (actual and formal argument lists differ in length))
+    method org.hamcrest.CoreMatchers.<T>hasItem(org.hamcrest.Matcher<? super T>) is not applicable
+      (cannot infer type-variable(s) T
+        (actual and formal argument lists differ in length)), line 44 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:35,697 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:35,698 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:35,699 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:35,699 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:35,700 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:35,700 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:35,701 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:35,701 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:35,702 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:35,704 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) no suitable method found for hasItem(no arguments)
+    method org.hamcrest.CoreMatchers.<T>hasItem(T) is not applicable
+      (cannot infer type-variable(s) T
+        (actual and formal argument lists differ in length))
+    method org.hamcrest.CoreMatchers.<T>hasItem(org.hamcrest.Matcher<? super T>) is not applicable
+      (cannot infer type-variable(s) T
+        (actual and formal argument lists differ in length)), line 44 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:36,686 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:36,687 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:36,687 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:36,688 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:36,688 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:36,689 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:36,689 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:36,690 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:36,690 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:36,691 laptop-ruo9ejtg workouttracking-dev.jar[24092] ERROR [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) no suitable method found for hasItem(no arguments)
+    method org.hamcrest.CoreMatchers.<T>hasItem(T) is not applicable
+      (cannot infer type-variable(s) T
+        (actual and formal argument lists differ in length))
+    method org.hamcrest.CoreMatchers.<T>hasItem(org.hamcrest.Matcher<? super T>) is not applicable
+      (cannot infer type-variable(s) T
+        (actual and formal argument lists differ in length)), line 44 in C:\laragon\www\Backend\src\test\java\com\wt\WorkoutResourceTest.java
+2022-11-03 13:26:37,770 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:37,770 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:37,771 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:37,772 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:37,773 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:37,773 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:37,774 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE
+  reason: class file for org.apiguardian.api.API$Status not found, line -1 in [unknown source]
+2022-11-03 13:26:37,774 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:37,775 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARN  [io.qua.dep.dev.JavaCompilationProvider] (Test Compile Timer) unknown enum constant org.apiguardian.api.API.Status.STABLE, line -1 in [unknown source]
+2022-11-03 13:26:38,037 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.qua.arc.pro.BeanProcessor] (build-25) Found unrecommended usage of private members (use package-private instead) in application beans:
+	- @Inject field com.wt.resource.WorkoutResource#workoutService,
+	- @Inject field com.wt.resource.ExerciseResource#exerciseService,
+	- @Inject field com.wt.resource.UserResource#userService
+2022-11-03 13:26:38,666 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-5) Starting an elasticsearch container using [docker.elastic.co/elasticsearch/elasticsearch:7.17.0]
+2022-11-03 13:26:38,667 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-5) Creating container for image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
+2022-11-03 13:26:38,707 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-5) Container docker.elastic.co/elasticsearch/elasticsearch:7.17.0 is starting: c7857a297239d8a743ff19c4d8964431a95dd9da83fef8046c473aeab76c27e7
+2022-11-03 13:26:49,610 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [doc.ela.co/.17.0]] (build-5) Container docker.elastic.co/elasticsearch/elasticsearch:7.17.0 started in PT10.9433244S
+2022-11-03 13:26:49,612 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.qua.ela.res.com.dep.DevServicesElasticsearchProcessor] (build-5) Dev Services for Elasticsearch started. Other Quarkus applications in dev mode will find the server automatically. For Quarkus applications in production mode, you can connect to this by configuring your application to use localhost:62005
+2022-11-03 13:26:49,826 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) workouttracking 1.0-SNAPSHOT on JVM (powered by Quarkus 2.13.3.Final) started in 12.026s. Listening on: http://localhost:8081
+2022-11-03 13:26:49,826 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) Profile test activated. 
+2022-11-03 13:26:49,826 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) Installed features: [agroal, cdi, elasticsearch-rest-client, hibernate-orm, hibernate-orm-panache, hibernate-orm-rest-data-panache, jdbc-h2, jdbc-postgresql, narayana-jta, resteasy-reactive, resteasy-reactive-jackson, resteasy-reactive-links, security, security-jpa, smallrye-context-propagation, vertx]
+2022-11-03 13:26:49,922 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Test runner thread) workouttracking(test application) stopped in 0.007s
+2022-11-03 16:42:53,707 laptop-ruo9ejtg workouttracking-dev.jar[24092] WARNING [org.aes.rea.ter.imp.AbstractWindowsTerminal] (Shutdown thread) Failed to write out.
+2022-11-03 16:42:53,700 laptop-ruo9ejtg workouttracking-dev.jar[24092] INFO  [io.quarkus] (Shutdown thread) workouttracking stopped in 0.118s

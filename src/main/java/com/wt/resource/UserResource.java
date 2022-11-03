@@ -13,6 +13,8 @@ import java.util.List;
 import java.util.UUID;
 
 @Path("/api/users")
+@Consumes(MediaType.APPLICATION_JSON)
+@Produces(MediaType.APPLICATION_JSON)
 public class UserResource {
     @Inject
     private UserService userService;
@@ -22,14 +24,12 @@ public class UserResource {
     }
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
     public List<UserAccount> allUsers(){
         return userService.allUsers();
     }
 
     @GET
-    @Path("{id}")
-    @Produces(MediaType.APPLICATION_JSON)
+    @Path("/{id}")
     public Response getById(@PathParam("id") UUID id){
         UserAccount user = userService.findUserById(id);
         if(user == null) {
