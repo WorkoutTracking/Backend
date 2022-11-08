@@ -17,7 +17,7 @@ public class ExerciseService {
         return exerciseRepository.listAll();
     }
 
-    public List<Exercise> findExercisesByWorkoutId(UUID workout_id) { return exerciseRepository.find("workout_id", workout_id).stream().toList(); }
+    public List<Exercise> findExercisesByWorkoutId(UUID workout_id) { return exerciseRepository.find("workout_id", workout_id).list(); }
 
     public Exercise addExercise(Exercise exercise){
         exerciseRepository.persist(exercise);
