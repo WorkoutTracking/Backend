@@ -6,6 +6,7 @@ import com.wt.repository.ExerciseRepository;
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Inject;
 import java.util.List;
+import java.util.UUID;
 
 @ApplicationScoped
 public class ExerciseService {
@@ -15,6 +16,8 @@ public class ExerciseService {
     public List<Exercise> allExercises() {
         return exerciseRepository.listAll();
     }
+
+    public List<Exercise> findExercisesByWorkoutId(UUID workout_id) { return exerciseRepository.find("workout_id", workout_id).stream().toList(); }
 
     public Exercise addExercise(Exercise exercise){
         exerciseRepository.persist(exercise);

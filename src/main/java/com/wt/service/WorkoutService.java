@@ -26,8 +26,7 @@ public class WorkoutService {
     public Workout findWorkoutById(UUID id){ return workoutRepository.find("id", id).firstResult();}
 
     public Workout addWorkout(Workout workout) {
-
-        if (workout == null){
+        if (workout.getName() == null || workout.getUser_email() == null){
             throw new IllegalArgumentException();
         }
         workoutRepository.persist(workout);
