@@ -14,6 +14,7 @@ public class Exercise {
     @Id
     @GeneratedValue(generator = "UUID")
     private UUID id;
+    private UUID workout_id;
     private String name;
     @CreationTimestamp
     private LocalDateTime created_at;
@@ -21,7 +22,8 @@ public class Exercise {
     public Exercise(){
     }
 
-    public Exercise(String name) {
+    public Exercise(UUID workout_id, String name) {
+        this.workout_id = workout_id;
         this.name = name;
     }
 
@@ -30,6 +32,9 @@ public class Exercise {
     }
     public String getName() {
         return name;
+    }
+    public UUID getWorkout_id() {
+        return workout_id;
     }
     public LocalDateTime getCreated_at() {
         return created_at;

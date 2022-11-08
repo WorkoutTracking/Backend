@@ -1,14 +1,11 @@
 package com.wt.domain;
 
-import io.quarkus.security.jpa.Roles;
 import org.hibernate.annotations.CreationTimestamp;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import java.time.LocalDateTime;
-import java.util.Set;
 import java.util.UUID;
 
 @Entity
@@ -18,20 +15,15 @@ public class UserAccount {
     private UUID id;
     private String name;
     private String email;
-    @Roles
-    private String role = "admin";
     @CreationTimestamp
     private LocalDateTime created_at;
-    @OneToMany
-    private Set<Workout> workouts;
 
     public UserAccount() {
     }
 
-    public UserAccount(String name, String email, String role) {
+    public UserAccount(String name, String email) {
         this.name = name;
         this.email = email;
-        this.role = role;
     }
 
     public UUID getId() {
@@ -52,6 +44,4 @@ public class UserAccount {
     public void setEmail(String email) {
         this.email = email;
     }
-
-    // workflow test 5
 }
