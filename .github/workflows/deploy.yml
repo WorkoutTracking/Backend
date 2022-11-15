@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       keycloak:
-        image: carlokessel/workouttracking:latest
+        image: CarloKessel/workouttracking:keycloak-workouttracking
         ports:
           - 8484:8484
     steps:
