@@ -1,6 +1,7 @@
 package com.wt.service;
 
 import com.wt.domain.Exercise;
+import com.wt.domain.Workout;
 import com.wt.repository.ExerciseRepository;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -20,6 +21,8 @@ public class ExerciseService {
     public List<Exercise> findExercisesByWorkoutId(UUID workout_id) { return exerciseRepository.find("workout_id", workout_id).list(); }
 
     public Exercise addExercise(Exercise exercise){
+/*        workout.getExercises().add(exercise);
+        exercise.setWorkout(workout);*/
         exerciseRepository.persist(exercise);
         return exercise;
     }

@@ -3,6 +3,7 @@ package com.wt.resource;
 import com.wt.domain.UserAccount;
 import com.wt.domain.Workout;
 import com.wt.service.WorkoutService;
+import io.quarkus.security.Authenticated;
 
 import javax.inject.Inject;
 import javax.transaction.Transactional;
@@ -13,9 +14,10 @@ import java.net.URI;
 import java.util.List;
 import java.util.UUID;
 
-@Path("/api/workouts")
+@Path("/api/users/workouts")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
+@Authenticated
 public class WorkoutResource {
 
     @Inject
@@ -47,6 +49,6 @@ public class WorkoutResource {
     @Transactional
     public Response addWorkout(Workout workout) {
         Workout workoutWithId = workoutService.addWorkout(workout);
-        return Response.created(URI.create("/api/workouts/" + workoutWithId.getId())).build();
+        return Response.created(URI.create("/api/users/workouts/" + workoutWithId.getId())).build();
     }
 }

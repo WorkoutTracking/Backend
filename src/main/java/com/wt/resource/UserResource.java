@@ -2,6 +2,7 @@ package com.wt.resource;
 
 import com.wt.domain.UserAccount;
 import com.wt.service.UserService;
+import io.quarkus.security.Authenticated;
 
 import javax.inject.Inject;
 import javax.transaction.Transactional;
@@ -15,6 +16,7 @@ import java.util.UUID;
 @Path("/api/users")
 @Consumes(MediaType.APPLICATION_JSON)
 @Produces(MediaType.APPLICATION_JSON)
+@Authenticated
 public class UserResource {
     @Inject
     private UserService userService;
