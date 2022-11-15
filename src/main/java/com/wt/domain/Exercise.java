@@ -1,10 +1,12 @@
 package com.wt.domain;
 
 import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.jdbc.Work;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -15,6 +17,9 @@ public class Exercise {
     @GeneratedValue(generator = "UUID")
     private UUID id;
     private UUID workout_id;
+
+    /*    @ManyToOne
+    private Workout workout;*/
     private String name;
     @CreationTimestamp
     private LocalDateTime created_at;
@@ -22,8 +27,8 @@ public class Exercise {
     public Exercise(){
     }
 
-    public Exercise(UUID workout_id, String name) {
-        this.workout_id = workout_id;
+    public Exercise(Workout workout, String name) {
+/*        this.workout = workout;*/
         this.name = name;
     }
 
@@ -33,13 +38,14 @@ public class Exercise {
     public String getName() {
         return name;
     }
-    public UUID getWorkout_id() {
-        return workout_id;
-    }
+/*    public Workout getWorkout() {
+        return workout;
+    }*/
     public LocalDateTime getCreated_at() {
         return created_at;
     }
     public void setName(String name) {
         this.name = name;
     }
+/*    public void setWorkout(Workout workout) {this.workout = workout;}*/
 }
