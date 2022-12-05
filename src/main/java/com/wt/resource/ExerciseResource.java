@@ -1,7 +1,6 @@
 package com.wt.resource;
 
 import com.wt.domain.Exercise;
-import com.wt.domain.Workout;
 import com.wt.service.ExerciseService;
 import io.quarkus.security.Authenticated;
 
@@ -22,23 +21,24 @@ public class ExerciseResource {
     @Inject
     private ExerciseService exerciseService;
 
-    public ExerciseResource(){
+    public ExerciseResource() {
 
     }
+
     @GET
-    public List<Exercise> allExercises(){
+    public List<Exercise> allExercises() {
         return exerciseService.allExercises();
     }
 
     @GET
     @Path("/workout/{id}")
-    public List<Exercise> getExercisisByWorkoutId(@PathParam("id") UUID workout_id){
+    public List<Exercise> getExercisisByWorkoutId(@PathParam("id") UUID workout_id) {
         return exerciseService.findExercisesByWorkoutId(workout_id);
     }
 
     @POST
     @Transactional
-    public Response addExercise(Exercise exercise){
+    public Response addExercise(Exercise exercise) {
         Exercise exerciseWithId = exerciseService.addExercise(exercise);
         return Response.created(URI.create("/api/users/exercises/" + exerciseWithId.getId())).build();
     }

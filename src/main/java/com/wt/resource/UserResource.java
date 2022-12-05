@@ -21,31 +21,35 @@ public class UserResource {
     @Inject
     private UserService userService;
 
-    public UserResource(){
+    public UserResource() {
 
     }
 
     @GET
-    public List<UserAccount> allUsers(){
+    public List<UserAccount> allUsers() {
         return userService.allUsers();
     }
 
     @GET
     @Path("/{id}")
-    public Response getById(@PathParam("id") UUID id){
+    public Response getById(@PathParam("id") UUID id) {
         UserAccount user = userService.findUserById(id);
-        if(user == null) {
+        if (user == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
-        }
-        else {
+        } else {
             return Response.ok(user).build();
         }
     }
 
     @POST
     @Transactional
-    public Response addUser(UserAccount userAccount) {
-        UserAccount userAccountWithId = userService.addUser(userAccount);
-        return Response.created(URI.create("/api/users/" + userAccountWithId.getId())).build();
+    @Path("/{name}/{user_email}")
+    public Response addUser(@PathParam("name") String name, @PathParam("user_email") String user_email) {
+        UserAccount userAccount = userService.addUser(name, user_email);
+        if (userAccount == null) {
+            return Response.notModified().build();
+        } else {
+            return Response.created(URI.create("/api/users/" + userAccount.getId())).build();
+        }
     }
 }

@@ -5,6 +5,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.NotBlank;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
@@ -13,7 +14,9 @@ public class UserAccount {
     @Id
     @GeneratedValue(generator = "UUID")
     private UUID id;
+    @NotBlank(message = "Name cannot be blank.")
     private String name;
+    @NotBlank(message = "Email cannot be blank.")
     private String email;
     @CreationTimestamp
     private LocalDateTime created_at;
@@ -29,18 +32,23 @@ public class UserAccount {
     public UUID getId() {
         return id;
     }
+
     public String getName() {
         return name;
     }
-    public LocalDateTime getCreated_at() {
-        return created_at;
-    }
-    public String getEmail() {
-        return email;
-    }
+
     public void setName(String name) {
         this.name = name;
     }
+
+    public LocalDateTime getCreated_at() {
+        return created_at;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }
