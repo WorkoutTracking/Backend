@@ -43,8 +43,13 @@ public class UserResource {
 
     @POST
     @Transactional
-    public Response addUser(UserAccount userAccount) {
-        UserAccount userAccountWithId = userService.addUser(userAccount);
-        return Response.created(URI.create("/api/users/" + userAccountWithId.getId())).build();
+    @Path("/{name}/{user_email}")
+    public Response addUser(@PathParam("name") String name, @PathParam("user_email") String user_email) {
+        UserAccount userAccount = userService.addUser(name, user_email);
+        if (userAccount == null) {
+            return Response.notModified().build();
+        } else {
+            return Response.created(URI.create("/api/users/" + userAccount.getId())).build();
+        }
     }
 }

@@ -50,8 +50,13 @@ public class WorkoutResource {
 
     @POST
     @Transactional
-    public Response addWorkout(Workout workout) {
-        Workout workoutWithId = workoutService.addWorkout(workout);
-        return Response.ok(workoutWithId).build();
+    @Path("/{name}/{user_email}")
+    public Response addWorkout(@PathParam("name") String name, @PathParam("user_email") String user_email) {
+        Workout workout = workoutService.addWorkout(name, user_email);
+        if (workout == null) {
+            return Response.notAcceptable(null).build();
+        } else {
+            return Response.ok(workout).build();
+        }
     }
 }

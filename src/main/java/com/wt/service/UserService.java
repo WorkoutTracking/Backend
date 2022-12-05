@@ -24,8 +24,23 @@ public class UserService {
         return userRepository.find("id", id).firstResult();
     }
 
-    public UserAccount addUser(UserAccount userAccount) {
-        userRepository.persist(userAccount);
-        return userAccount;
+    public UserAccount addUser(String name, String user_email) {
+        if (checkIfUserExists(user_email))
+        {
+            return null;
+        } else {
+            UserAccount userAccount = new UserAccount();
+            userAccount.setName(name);
+            userAccount.setEmail(user_email);
+
+            userRepository.persist(userAccount);
+            return userAccount;
+        }
+    }
+
+    public boolean checkIfUserExists(String email)
+    {
+        long count = userRepository.find("email", email).count();
+        return count != 0;
     }
 }
