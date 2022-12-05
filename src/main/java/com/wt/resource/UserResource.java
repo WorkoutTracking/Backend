@@ -21,23 +21,22 @@ public class UserResource {
     @Inject
     private UserService userService;
 
-    public UserResource(){
+    public UserResource() {
 
     }
 
     @GET
-    public List<UserAccount> allUsers(){
+    public List<UserAccount> allUsers() {
         return userService.allUsers();
     }
 
     @GET
     @Path("/{id}")
-    public Response getById(@PathParam("id") UUID id){
+    public Response getById(@PathParam("id") UUID id) {
         UserAccount user = userService.findUserById(id);
-        if(user == null) {
+        if (user == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
-        }
-        else {
+        } else {
             return Response.ok(user).build();
         }
     }

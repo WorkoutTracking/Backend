@@ -1,6 +1,5 @@
 package com.wt.resource;
 
-import com.wt.domain.UserAccount;
 import com.wt.domain.Workout;
 import com.wt.service.WorkoutService;
 import io.quarkus.security.Authenticated;
@@ -10,7 +9,6 @@ import javax.transaction.Transactional;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.net.URI;
 import java.util.List;
 import java.util.UUID;
 
@@ -24,23 +22,28 @@ public class WorkoutResource {
     private WorkoutService workoutService;
 
 
-    public WorkoutResource(){
+    public WorkoutResource() {
 
     }
 
     @GET
-    public List<Workout> allWorkouts(){
+    public List<Workout> allWorkouts() {
         return workoutService.allWorkouts();
     }
 
     @GET
+    @Path("/user/{user_email}")
+    public List<Workout> allWorkoutsByUser(@PathParam("user_email") String user_email) {
+        return workoutService.allWorkoutsByUser(user_email);
+    }
+
+    @GET
     @Path("/{id}")
-    public Response getById(@PathParam("id") UUID id){
+    public Response getById(@PathParam("id") UUID id) {
         Workout workout = workoutService.findWorkoutById(id);
-        if(workout == null) {
+        if (workout == null) {
             return Response.status(Response.Status.NOT_FOUND).build();
-        }
-        else {
+        } else {
             return Response.ok(workout).build();
         }
     }
@@ -49,6 +52,6 @@ public class WorkoutResource {
     @Transactional
     public Response addWorkout(Workout workout) {
         Workout workoutWithId = workoutService.addWorkout(workout);
-        return Response.created(URI.create("/api/users/workouts/" + workoutWithId.getId())).build();
+        return Response.ok(workoutWithId).build();
     }
 }

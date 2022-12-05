@@ -17,10 +17,12 @@ public class UserService {
     }
 
     public List<UserAccount> allUsers() {
-        return  userRepository.listAll();
+        return userRepository.listAll();
     }
 
-    public UserAccount findUserById(UUID id){ return userRepository.find("id", id).firstResult();}
+    public UserAccount findUserById(UUID id) {
+        return userRepository.find("id", id).firstResult();
+    }
 
     public UserAccount addUser(UserAccount userAccount) {
         userRepository.persist(userAccount);

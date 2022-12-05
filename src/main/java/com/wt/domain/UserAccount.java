@@ -29,18 +29,23 @@ public class UserAccount {
     public UUID getId() {
         return id;
     }
+
     public String getName() {
         return name;
     }
-    public LocalDateTime getCreated_at() {
-        return created_at;
-    }
-    public String getEmail() {
-        return email;
-    }
+
     public void setName(String name) {
         this.name = name;
     }
+
+    public LocalDateTime getCreated_at() {
+        return created_at;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
     public void setEmail(String email) {
         this.email = email;
     }

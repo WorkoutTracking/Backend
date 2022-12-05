@@ -1,6 +1,5 @@
 package com.wt.service;
 
-import com.wt.domain.UserAccount;
 import com.wt.domain.Workout;
 import com.wt.repository.WorkoutRepository;
 
@@ -15,18 +14,24 @@ public class WorkoutService {
     @Inject
     WorkoutRepository workoutRepository;
 
-    public WorkoutService(){
+    public WorkoutService() {
 
     }
 
     public List<Workout> allWorkouts() {
-        return  workoutRepository.listAll();
+        return workoutRepository.listAll();
     }
 
-    public Workout findWorkoutById(UUID id){ return workoutRepository.find("id", id).firstResult();}
+    public List<Workout> allWorkoutsByUser(String user_email) {
+        return workoutRepository.find("user_email", user_email).list();
+    }
+
+    public Workout findWorkoutById(UUID id) {
+        return workoutRepository.find("id", id).firstResult();
+    }
 
     public Workout addWorkout(Workout workout) {
-        if (workout.getName() == null || workout.getUser_email() == null){
+        if (workout.getName() == null || workout.getUser_email() == null) {
             throw new IllegalArgumentException();
         }
         workoutRepository.persist(workout);
