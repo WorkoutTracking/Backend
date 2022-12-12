@@ -21,10 +21,6 @@ public class UserResource {
     @Inject
     private UserService userService;
 
-    public UserResource() {
-
-    }
-
     @GET
     public List<UserAccount> allUsers() {
         return userService.allUsers();
@@ -34,11 +30,7 @@ public class UserResource {
     @Path("/{id}")
     public Response getById(@PathParam("id") UUID id) {
         UserAccount user = userService.findUserById(id);
-        if (user == null) {
-            return Response.status(Response.Status.NOT_FOUND).build();
-        } else {
-            return Response.ok(user).build();
-        }
+        return (user != null) ? Response.ok(user).build() : Response.status(Response.Status.NOT_FOUND).build();
     }
 
     @POST
@@ -46,10 +38,6 @@ public class UserResource {
     @Path("/{name}/{user_email}")
     public Response addUser(@PathParam("name") String name, @PathParam("user_email") String user_email) {
         UserAccount userAccount = userService.addUser(name, user_email);
-        if (userAccount == null) {
-            return Response.notModified().build();
-        } else {
-            return Response.created(URI.create("/api/users/" + userAccount.getId())).build();
-        }
+        return (userAccount != null) ? Response.created(URI.create("/api/users/" + userAccount.getId())).build() : Response.notModified().build();
     }
 }

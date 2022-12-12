@@ -14,12 +14,15 @@ public class UserAccount {
     @Id
     @GeneratedValue(generator = "UUID")
     private UUID id;
+
     @NotBlank(message = "Name cannot be blank.")
     private String name;
+
     @NotBlank(message = "Email cannot be blank.")
     private String email;
+
     @CreationTimestamp
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 
     public UserAccount() {
     }
@@ -41,15 +44,15 @@ public class UserAccount {
         this.name = name;
     }
 
-    public LocalDateTime getCreated_at() {
-        return created_at;
-    }
-
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 }

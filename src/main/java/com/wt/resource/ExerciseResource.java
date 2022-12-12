@@ -8,8 +8,6 @@ import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.Response;
-import java.net.URI;
 import java.util.List;
 import java.util.UUID;
 
@@ -21,10 +19,6 @@ public class ExerciseResource {
     @Inject
     private ExerciseService exerciseService;
 
-    public ExerciseResource() {
-
-    }
-
     @GET
     public List<Exercise> allExercises() {
         return exerciseService.allExercises();
@@ -32,15 +26,21 @@ public class ExerciseResource {
 
     @GET
     @Path("/workout/{id}")
-    public List<Exercise> getExercisisByWorkoutId(@PathParam("id") UUID workout_id) {
-        return exerciseService.findExercisesByWorkoutId(workout_id);
+    public List<Exercise> getExercisisByWorkoutId(@PathParam("id") UUID workoutId) {
+        return exerciseService.findExercisesByWorkoutId(workoutId);
     }
 
     @POST
     @Transactional
-    public Response addExercise(Exercise exercise) {
-        Exercise exerciseWithId = exerciseService.addExercise(exercise);
-        return Response.created(URI.create("/api/users/exercises/" + exerciseWithId.getId())).build();
+    @Path("/{workout}/{name}/{user_email}")
+    public String addExercise(@PathParam("workout") UUID workoutId, @PathParam("name") String name, @PathParam("user_email") String userEmail) {
+        return exerciseService.addExercise(workoutId, name, userEmail);
     }
 
+    @DELETE
+    @Path("/{id}/{user_email}")
+    @Transactional
+    public String deleteWorkout(@PathParam("id") UUID id, @PathParam("user_email") String userEmail) {
+        return exerciseService.deleteExercise(id, userEmail);
+    }
 }

@@ -13,9 +13,6 @@ public class UserService {
     @Inject
     UserRepository userRepository;
 
-    public UserService() {
-    }
-
     public List<UserAccount> allUsers() {
         return userRepository.listAll();
     }
@@ -24,23 +21,20 @@ public class UserService {
         return userRepository.find("id", id).firstResult();
     }
 
-    public UserAccount addUser(String name, String user_email) {
-        if (checkIfUserExists(user_email))
-        {
+    public UserAccount addUser(String name, String userEmail) {
+        if (checkIfUserExists(userEmail)) {
             return null;
         } else {
             UserAccount userAccount = new UserAccount();
             userAccount.setName(name);
-            userAccount.setEmail(user_email);
-
+            userAccount.setEmail(userEmail);
             userRepository.persist(userAccount);
             return userAccount;
         }
     }
 
-    public boolean checkIfUserExists(String email)
-    {
+    public boolean checkIfUserExists(String email) {
         long count = userRepository.find("email", email).count();
-        return count != 0;
+        return count > 0;
     }
 }

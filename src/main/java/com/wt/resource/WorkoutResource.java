@@ -19,12 +19,7 @@ import java.util.UUID;
 public class WorkoutResource {
 
     @Inject
-    private WorkoutService workoutService;
-
-
-    public WorkoutResource() {
-
-    }
+    WorkoutService workoutService;
 
     @GET
     public List<Workout> allWorkouts() {
@@ -38,13 +33,18 @@ public class WorkoutResource {
     }
 
     @GET
-    @Path("/{id}")
-    public Response getById(@PathParam("id") UUID id) {
-        Workout workout = workoutService.findWorkoutById(id);
-        if (workout == null) {
-            return Response.status(Response.Status.NOT_FOUND).build();
-        } else {
-            return Response.ok(workout).build();
+    @Path("/{id}/{user_email}")
+    public Response getById(@PathParam("id") UUID id, @PathParam("user_email") String userEmail) {
+        try {
+            Workout workout = workoutService.findWorkoutById(id, userEmail);
+            if (workout == null)
+            {
+                return Response.status(Response.Status.NOT_FOUND).entity("Error: workout not found").build();
+            } else {
+                return Response.ok(workout).build();
+            }
+        } catch (IllegalArgumentException ex) {
+            return Response.status(Response.Status.NOT_FOUND).entity(ex.getMessage()).build();
         }
     }
 
@@ -52,11 +52,11 @@ public class WorkoutResource {
     @Transactional
     @Path("/{name}/{user_email}")
     public Response addWorkout(@PathParam("name") String name, @PathParam("user_email") String user_email) {
-        Workout workout = workoutService.addWorkout(name, user_email);
-        if (workout == null) {
-            return Response.notAcceptable(null).build();
-        } else {
+        try {
+            Workout workout = workoutService.addWorkout(name, user_email);
             return Response.ok(workout).build();
+        } catch (IllegalArgumentException ex) {
+            return Response.status(Response.Status.UNAUTHORIZED).entity(ex.getMessage()).build();
         }
     }
 }

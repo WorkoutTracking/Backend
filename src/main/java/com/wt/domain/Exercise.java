@@ -10,28 +10,32 @@ import java.util.UUID;
 
 @Entity
 public class Exercise {
-
     @Id
     @GeneratedValue(generator = "UUID")
     private UUID id;
-    private UUID workout_id;
 
-    /*    @ManyToOne
-    private Workout workout;*/
+    private UUID workoutId;
     private String name;
     @CreationTimestamp
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 
     public Exercise() {
     }
 
-    public Exercise(Workout workout, String name) {
-        /*        this.workout = workout;*/
+    public Exercise(String name) {
         this.name = name;
     }
 
     public UUID getId() {
         return id;
+    }
+
+    public UUID getWorkoutId() {
+        return workoutId;
+    }
+
+    public void setWorkoutId(UUID workoutId) {
+        this.workoutId = workoutId;
     }
 
     public String getName() {
@@ -42,11 +46,7 @@ public class Exercise {
         this.name = name;
     }
 
-    /*    public Workout getWorkout() {
-            return workout;
-        }*/
-    public LocalDateTime getCreated_at() {
-        return created_at;
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
-    /*    public void setWorkout(Workout workout) {this.workout = workout;}*/
 }

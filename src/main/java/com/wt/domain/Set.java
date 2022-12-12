@@ -2,34 +2,33 @@ package com.wt.domain;
 
 import org.hibernate.annotations.CreationTimestamp;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 @Entity
+@Table(name = "exerciseSet")
+@NamedQueries({
+        @NamedQuery(name = "Set.getByExerciseAndOrderByCreated", query = "from Set where exerciseId = :exerciseId order by createdAt"),
+        @NamedQuery(name = "Set.updateSet", query = "update Set set sets = :sets, reps = :reps, weight = :weight, rest = :rest where id = :id")
+})
 public class Set {
-
     @Id
     @GeneratedValue(generator = "UUID")
     private UUID id;
-    private UUID exercise_id;
-
-    /*    @ManyToOne
-    private Exercise exercise;*/
+    private UUID exerciseId;
     private int sets;
     private int reps;
     private double weight;
     private int rest;
     @CreationTimestamp
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 
     public Set() {
     }
 
-    public Set(Exercise exercise, int sets, int reps, double weight, int rest) {
-        /*        this.workout = workout;*/
+    public Set(UUID exerciseId, int sets, int reps, double weight, int rest) {
+        this.exerciseId = exerciseId;
         this.sets = sets;
         this.reps = reps;
         this.weight = weight;
@@ -72,11 +71,7 @@ public class Set {
         this.rest = rest;
     }
 
-    /*    public Exercise getExercise() {
-            return exercise;
-        }*/
-    public LocalDateTime getCreated_at() {
-        return created_at;
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
-    /*    public void setExercise(Exercise exercise) {this.exercise = exercise;}*/
 }
