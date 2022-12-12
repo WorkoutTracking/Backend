@@ -16,11 +16,10 @@ public class WorkoutServiceTest {
     WorkoutService workoutService;
 
     @Test
-    @TestSecurity(user = "admin@gmail.com", roles = "user")
-    public void When_Get_Workouts_By_User_Is_More_Than_Zero()
-    {
+    @TestSecurity(user = "carlovankessel@yahoo.nl", roles = "user")
+    public void When_Get_Workouts_By_User_Is_More_Than_Zero() {
         // Arrange
-        String email = "admin@gmail.com";
+        String email = "carlovankessel@yahoo.nl";
         int lowestSize = 0;
 
         // Act
@@ -29,12 +28,12 @@ public class WorkoutServiceTest {
         // Assert
         Assertions.assertNotEquals(lowestSize, workouts.size());
     }
+
     @Test
-    @TestSecurity(user = "admin@gmail.com", roles = "user")
-    public void When_Get_Workouts_Fails_Because_TokenEmail_And_Email_Arent_From_The_Same_User()
-    {
+    @TestSecurity(user = "carlovankessel@yahoo.nl", roles = "user")
+    public void When_Get_Workouts_Fails_Because_TokenEmail_And_Email_Arent_From_The_Same_User() {
         // Arrange
-        String email = "carlovankessel@gmail.com";
+        String email = "admin@gmail.com";
 
         // Act
         List<Workout> workouts = workoutService.allWorkoutsByUser(email);

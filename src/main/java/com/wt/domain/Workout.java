@@ -15,39 +15,36 @@ public class Workout {
     @GeneratedValue(generator = "UUID")
     private UUID id;
     @NotBlank(message = "User email cannot be blank.")
-    private String user_email;
+    private String userEmail;
     @NotBlank(message = "Name cannot be blank.")
     private String name;
     @CreationTimestamp
-    private LocalDateTime created_at;
+    private LocalDateTime createdAt;
 
     public Workout() {
     }
 
-    public Workout(String user_email, String name) {
-        this.user_email = user_email;
+    public Workout(String userEmail, String name) {
+        this.userEmail = userEmail;
         this.name = name;
     }
 
     public UUID getId() {
         return id;
     }
-
     public String getName() {
         return name;
-    }
-
-    public String getUser_email() {
-        return user_email;
-    }
-
-    public LocalDateTime getCreated_at() {
-        return created_at;
     }
     public void setName(String name) {
         this.name = name;
     }
-    public void setUser_email(String user_email) {
-        this.user_email = user_email;
+    public String getUserEmail() {
+        return userEmail;
+    }
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
     }
 }
