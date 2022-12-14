@@ -16,10 +16,10 @@ import static org.hamcrest.CoreMatchers.*;
 
 @QuarkusTest
 @TestHTTPEndpoint(WorkoutResource.class)
-public class WorkoutResourceTest {
+class WorkoutResourceTest {
     @Test
     @TestSecurity(user = "carlovankessel@yahoo.nl", roles = "user")
-    public void When_Get_Workouts_Not_Empty() {
+    void When_Get_Workouts_Not_Empty() {
         given()
                 .when().get("/user/carlovankessel@yahoo.nl")
                 .then()
@@ -30,24 +30,18 @@ public class WorkoutResourceTest {
     @Test
     @Transactional
     @TestSecurity(user = "carlovankessel@yahoo.nl", roles = "user")
-    public void When_Post_Workout_Succeeds() {
+    void When_Post_Workout_Succeeds() {
         given()
                 .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON)
                 .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON)
                 .when().post("/" + "Legs" + "/" + "carlovankessel@yahoo.nl")
                 .then()
-                .statusCode(200);
+                .statusCode(201);
 
         given()
                 .when().get("/user/carlovankessel@yahoo.nl")
                 .then()
                 .statusCode(200)
-                .body("$.size()", is(3),
-                        "[0].userEmail", is("carlovankessel@yahoo.nl"),
-                        "[0].name", is("Legs"),
-                        "[1].userEmail", is("carlovankessel@yahoo.nl"),
-                        "[1].name", is("Pull"),
-                        "[2].userEmail", is("carlovankessel@yahoo.nl"),
-                        "[2].name", is("Push"));
+                .body("$.size()", is(3));
     }
 }

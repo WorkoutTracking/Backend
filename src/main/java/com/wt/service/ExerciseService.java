@@ -20,42 +20,50 @@ public class ExerciseService {
     @Inject
     SecurityIdentity securityIdentity;
 
+    private static final String INVALIDUSER = "Error: Invalid user";
+
     public List<Exercise> allExercises() {
         return exerciseRepository.listAll();
     }
 
-    public List<Exercise> findExercisesByWorkoutId(UUID workoutId) {
+    public List<Exercise> findExercisesByWorkoutId(UUID workoutId, String userEmail) {
+        if (!userService.checkIfUserExists(userEmail) || !securityIdentity.getPrincipal().getName().equals(userEmail)) {
+            throw new IllegalArgumentException(INVALIDUSER);
+        }
+
         return exerciseRepository.find("workoutId", workoutId).list();
     }
 
     public String addExercise(UUID workoutId, String name, String userEmail) {
-        if (userService.checkIfUserExists(userEmail) || !securityIdentity.getPrincipal().getName().equals(userEmail)) {
-            return "User not valid";
+        if (!userService.checkIfUserExists(userEmail) || !securityIdentity.getPrincipal().getName().equals(userEmail)) {
+            throw new IllegalArgumentException(INVALIDUSER);
         }
-
         if (name == null || workoutId == null) {
-            return "Name or WorkoutId is not defined";
+            throw new IllegalArgumentException("Error: Name or WorkoutId is not defined");
         }
 
-        Exercise exercise = new Exercise();
-        exercise.setName(name);
-        exercise.setWorkoutId(workoutId);
+        try {
+            Exercise exercise = new Exercise();
+            exercise.setName(name);
+            exercise.setWorkoutId(workoutId);
 
-        exerciseRepository.persist(exercise);
-        return "Exercise created";
+            exerciseRepository.persist(exercise);
+            return "Exercise created";
+        } catch (Exception error) {
+            return error.getMessage();
+        }
     }
 
     public String deleteExercise(UUID id, String userEmail) {
-        if (userService.checkIfUserExists(userEmail) || !securityIdentity.getPrincipal().getName().equals(userEmail)) {
-            return "User not valid";
+        if (!userService.checkIfUserExists(userEmail) || !securityIdentity.getPrincipal().getName().equals(userEmail)) {
+            throw new IllegalArgumentException(INVALIDUSER);
         }
 
-        long message = exerciseRepository.delete("id", id);
-
-        if (message == 1) {
+        try {
+            exerciseRepository.delete("id", id);
             return "Exercise is deleted";
-        } else {
-            return "Something went wrong";
+        } catch (Exception error) {
+            return error.getMessage();
         }
     }
 }

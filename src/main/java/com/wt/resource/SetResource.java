@@ -8,6 +8,7 @@ import javax.inject.Inject;
 import javax.transaction.Transactional;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 import java.util.List;
 import java.util.UUID;
 
@@ -17,7 +18,7 @@ import java.util.UUID;
 @Authenticated
 public class SetResource {
     @Inject
-    private SetService setService;
+    SetService setService;
 
     @GET
     public List<Set> allSets() {
@@ -33,21 +34,31 @@ public class SetResource {
     @POST
     @Transactional
     @Path("/{exercise}/{user_email}")
-    public String addSet(@PathParam("exercise") UUID exerciseId, @PathParam("user_email") String userEmail) {
-        return setService.addSet(exerciseId, userEmail);
+    public Response addSet(@PathParam("exercise") UUID exerciseId, @PathParam("user_email") String userEmail) {
+        try {
+            String message = setService.addSet(exerciseId, userEmail);
+            return Response.status(Response.Status.CREATED).entity(message).build();
+        } catch (IllegalArgumentException ex) {
+            return Response.status(Response.Status.NOT_MODIFIED).entity(ex.getMessage()).build();
+        }
     }
 
     @DELETE
     @Transactional
     @Path("/{set}/{user_email}")
-    public String deleteSet(@PathParam("set") UUID setId, @PathParam("user_email") String userEmail) {
-        return setService.deleteSet(setId, userEmail);
+    public Response deleteSet(@PathParam("set") UUID setId, @PathParam("user_email") String userEmail) {
+        try {
+            String message = setService.deleteSet(setId, userEmail);
+            return Response.status(Response.Status.OK).entity(message).build();
+        } catch (IllegalArgumentException ex) {
+            return Response.status(Response.Status.NOT_MODIFIED).entity(ex.getMessage()).build();
+        }
     }
 
     @PUT
     @Transactional
     @Path("/{set_id}/{sets}/{reps}/{weight}/{rest}/{user_email}")
-    public String updateSet(
+    public Response updateSet(
             @PathParam("set_id") UUID setId,
             @PathParam("sets") int sets,
             @PathParam("reps") int reps,
@@ -55,6 +66,11 @@ public class SetResource {
             @PathParam("rest") int rest,
             @PathParam("user_email") String userEmail
     ) {
-        return setService.updateSet(setId, sets, reps, weight, rest, userEmail);
+        try {
+            String message = setService.updateSet(setId, sets, reps, weight, rest, userEmail);
+            return Response.status(Response.Status.OK).entity(message).build();
+        } catch (IllegalArgumentException ex) {
+            return Response.status(Response.Status.NOT_MODIFIED).entity(ex.getMessage()).build();
+        }
     }
 }

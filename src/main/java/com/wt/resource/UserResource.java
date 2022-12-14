@@ -36,8 +36,12 @@ public class UserResource {
     @POST
     @Transactional
     @Path("/{name}/{user_email}")
-    public Response addUser(@PathParam("name") String name, @PathParam("user_email") String user_email) {
-        UserAccount userAccount = userService.addUser(name, user_email);
-        return (userAccount != null) ? Response.created(URI.create("/api/users/" + userAccount.getId())).build() : Response.notModified().build();
+    public Response addUser(@PathParam("name") String name, @PathParam("user_email") String userEmail) {
+        try {
+            UserAccount userAccount = userService.addUser(name, userEmail);
+            return Response.created(URI.create("/api/users/" + userAccount.getId())).build();
+        } catch (IllegalArgumentException ex) {
+            return Response.status(Response.Status.NOT_IMPLEMENTED).entity(ex.getMessage()).build();
+        }
     }
 }
