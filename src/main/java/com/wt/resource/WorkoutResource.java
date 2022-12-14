@@ -28,8 +28,17 @@ public class WorkoutResource {
 
     @GET
     @Path("/user/{user_email}")
-    public List<Workout> allWorkoutsByUser(@PathParam("user_email") String user_email) {
-        return workoutService.allWorkoutsByUser(user_email);
+    public Response allWorkoutsByUser(@PathParam("user_email") String userEmail) {
+        try {
+            List<Workout> workouts = workoutService.allWorkoutsByUser(userEmail);
+            if (workouts.isEmpty()) {
+                return Response.status(Response.Status.NOT_FOUND).entity("Warning: You have no workouts").build();
+            } else {
+                return Response.ok(workouts).build();
+            }
+        } catch (IllegalArgumentException ex) {
+            return Response.status(Response.Status.UNAUTHORIZED).entity(ex.getMessage()).build();
+        }
     }
 
     @GET
@@ -51,10 +60,10 @@ public class WorkoutResource {
     @POST
     @Transactional
     @Path("/{name}/{user_email}")
-    public Response addWorkout(@PathParam("name") String name, @PathParam("user_email") String user_email) {
+    public Response addWorkout(@PathParam("name") String name, @PathParam("user_email") String userEmail) {
         try {
-            Workout workout = workoutService.addWorkout(name, user_email);
-            return Response.ok(workout).build();
+            Workout workout = workoutService.addWorkout(name, userEmail);
+            return Response.status(Response.Status.CREATED).entity(workout).build();
         } catch (IllegalArgumentException ex) {
             return Response.status(Response.Status.UNAUTHORIZED).entity(ex.getMessage()).build();
         }

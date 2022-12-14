@@ -8,10 +8,8 @@ import java.util.UUID;
 
 @Entity
 @Table(name = "exerciseSet")
-@NamedQueries({
-        @NamedQuery(name = "Set.getByExerciseAndOrderByCreated", query = "from Set where exerciseId = :exerciseId order by createdAt"),
-        @NamedQuery(name = "Set.updateSet", query = "update Set set sets = :sets, reps = :reps, weight = :weight, rest = :rest where id = :id")
-})
+@NamedQuery(name = "Set.getByExerciseAndOrderByCreated", query = "from Set where exerciseId = :exerciseId order by createdAt")
+@NamedQuery(name = "Set.updateSet", query = "update Set set sets = :sets, reps = :reps, weight = :weight, rest = :rest where id = :id")
 public class Set {
     @Id
     @GeneratedValue(generator = "UUID")
@@ -74,4 +72,6 @@ public class Set {
     public LocalDateTime getCreatedAt() {
         return createdAt;
     }
+
+    public UUID getExerciseId() { return exerciseId; }
 }

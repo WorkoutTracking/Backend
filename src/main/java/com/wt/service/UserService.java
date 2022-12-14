@@ -23,7 +23,7 @@ public class UserService {
 
     public UserAccount addUser(String name, String userEmail) {
         if (checkIfUserExists(userEmail)) {
-            return null;
+            throw new IllegalArgumentException("Error: User already exists.");
         } else {
             UserAccount userAccount = new UserAccount();
             userAccount.setName(name);
