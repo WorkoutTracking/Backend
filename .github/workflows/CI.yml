@@ -40,5 +40,5 @@ jobs:
          restore-keys: ${{ runner.os }}-gradle
       - name: Test, Build and analyze in SonarCloud
         env:
-         SONAR_TOKEN: ${{ secrets.SONAR_KEY }}
+         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: ./gradlew jacocoTestReport && ./gradlew build sonarqube --info
