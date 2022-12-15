@@ -11,11 +11,11 @@ import static org.hamcrest.CoreMatchers.not;
 
 @QuarkusTest
 @TestHTTPEndpoint(ExerciseResource.class)
-class ExerciseResourceTest {
+public class ExerciseResourceTest {
 
     @Test
     @TestSecurity(user = "carlovankessel@yahoo.nl", roles = "user")
-    void When_Get_Exercises_Not_Empty() {
+    public void When_Get_Exercises_Not_Empty() {
         given()
                 .when().get()
                 .then()

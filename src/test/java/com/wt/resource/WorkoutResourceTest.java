@@ -16,10 +16,10 @@ import static org.hamcrest.CoreMatchers.*;
 
 @QuarkusTest
 @TestHTTPEndpoint(WorkoutResource.class)
-class WorkoutResourceTest {
+public class WorkoutResourceTest {
     @Test
     @TestSecurity(user = "carlovankessel@yahoo.nl", roles = "user")
-    void When_Get_Workouts_Not_Empty() {
+    public void When_Get_Workouts_Not_Empty() {
         given()
                 .when().get("/user/carlovankessel@yahoo.nl")
                 .then()
@@ -30,7 +30,7 @@ class WorkoutResourceTest {
     @Test
     @Transactional
     @TestSecurity(user = "carlovankessel@yahoo.nl", roles = "user")
-    void When_Post_Workout_Succeeds() {
+    public void When_Post_Workout_Succeeds() {
         given()
                 .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON)
                 .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON)
