@@ -58,9 +58,8 @@ jacocoTestReport {
 
 sonarqube {
     properties {
-        property "sonar.host.url", "http://localhost:9000"
-        property "sonar.projectName", "backend"
-        property "sonar.projectKey", "backend"
-        property "sonar.login", "squ_b46ac0ecae9436cb7136c77215ed85a5f6fecae8"
+        property "sonar.projectKey", "WorkoutTracking_Backend"
+        property "sonar.organization", "WorkoutTracking"
+        property "sonar.host.url", "https://sonarcloud.io"
     }
 }
