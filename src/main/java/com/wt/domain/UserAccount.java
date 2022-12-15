@@ -15,7 +15,7 @@ public class UserAccount {
     @GeneratedValue(generator = "UUID")
     private UUID id;
 
-    @NotBlank(message = "Name cannot be blank.")
+    @NotBlank(message = "Name cannot be blank..")
     private String name;
 
     @NotBlank(message = "Email cannot be blank.")
