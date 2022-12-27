@@ -5,8 +5,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  build:
-    name: Build and analyze
+  test:
     runs-on: ubuntu-latest
     services:
       keycloak:
@@ -26,6 +25,15 @@ jobs:
         run: chmod +x ./gradlew
       - name: Run build with Gradle Wrapper
         run: ./gradlew build
+
+  sonarcloud:
+    runs-on: ubuntu-latest
+    services:
+      keycloak:
+        image: carlovankessel/workouttracking:latest
+        ports:
+          - 8484:8484
+    steps:
       - name: Cache SonarCloud packages
         uses: actions/cache@v1
         with:
