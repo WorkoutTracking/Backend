@@ -9,6 +9,8 @@ import javax.inject.Inject;
 import java.util.List;
 import java.util.UUID;
 
+import static io.quarkus.arc.ComponentsProvider.LOG;
+
 @ApplicationScoped
 public class ExerciseService {
     @Inject
