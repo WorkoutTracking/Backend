@@ -7,18 +7,16 @@
 #
 # Then, build the image with:
 #
-# docker build -f src/main/docker/Dockerfile.jvm -t quarkus/workouttracking-jvm .
-#
-# Then run the container using:
-#
-# docker run -i --rm -p 8080:8080 quarkus/workouttracking-jvm
+# docker build -f src/main/docker/Dockerfile.jvm -t carlovankessel/workouttracking/backend .
 #
 # If you want to include the debug port into your docker image
 # you will have to expose the debug port (default 5005) like this :  EXPOSE 8080 5005
 #
 # Then run the container using :
 #
-# docker run -i --rm -p 8080:8080 quarkus/workouttracking-jvm
+# docker run -i -p 8080:8080 -e QUARKUS_KEYCLOAK_SECRET=ZTDeeTYbFzJN0TeBVhFuLcwfE84CiALq -e QUARKUS_DB_USERNAME=postgres -e QUARKUS_DB_PASSWORD=jtGL3V4bLg --restart on-failure --name backend --network=backend_backend carlovankessel/workouttracking/backend
+# docker run -i --rm -p 8080:8080 --name quarkus-dev --network=back-end_auctionsense_network quarkus/quarkus-auctionsense-jvm
+# docker run -i --rm -p 8080:8080 --name backend --network=backend_workouttracking_network carlovankessel/workouttracking/backend
 #
 # This image uses the `run-java.sh` script to run the application.
 # This scripts computes the command line to execute your Java application, and
@@ -75,7 +73,7 @@
 #   accessed directly. (example: "foo.example.com,bar.example.com")
 #
 ###
-FROM registry.access.redhat.com/ubi8/openjdk-17:1.14
+FROM registry.access.redhat.com/ubi8/openjdk-17:1.11
 
 ENV LANGUAGE='en_US:en'
 

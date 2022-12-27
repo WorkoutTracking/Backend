@@ -27,7 +27,7 @@ public class ExerciseResource {
 
     @GET
     @Path("/workout/{id}/{user_email}")
-    public Response getExercisisByWorkoutId(@PathParam("id") UUID workoutId, @PathParam("user_email") String userEmail) {
+    public Response getExercisesByWorkoutId(@PathParam("id") UUID workoutId, @PathParam("user_email") String userEmail) {
         try {
             List<Exercise> exercises = exerciseService.findExercisesByWorkoutId(workoutId, userEmail);
             if (exercises.isEmpty()) {
