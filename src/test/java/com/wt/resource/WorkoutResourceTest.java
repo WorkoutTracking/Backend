@@ -3,7 +3,6 @@ package com.wt.resource;
 import io.quarkus.test.common.http.TestHTTPEndpoint;
 import io.quarkus.test.junit.QuarkusTest;
 import io.quarkus.test.security.TestSecurity;
-import io.restassured.http.ContentType;
 import org.apache.http.HttpHeaders;
 import org.jboss.resteasy.reactive.RestResponse;
 import org.junit.jupiter.api.Test;
@@ -12,7 +11,8 @@ import javax.transaction.Transactional;
 import javax.ws.rs.core.MediaType;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.CoreMatchers.not;
 
 @QuarkusTest
 @TestHTTPEndpoint(WorkoutResource.class)

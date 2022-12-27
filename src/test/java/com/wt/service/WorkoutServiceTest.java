@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import javax.inject.Inject;
+import javax.transaction.Transactional;
 import java.util.List;
 
 @QuarkusTest
@@ -35,12 +36,38 @@ public class WorkoutServiceTest {
         // Arrange
         String email = "admin@gmail.com";
 
-        // Act
-
         // Assert
-        Assertions.assertThrows(IllegalArgumentException.class, () ->{
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
             workoutService.allWorkoutsByUser(email);
         });
     }
 
+    @Test
+    @Transactional
+    @TestSecurity(user = "carlovankessel@yahoo.nl", roles = "user")
+    public void When_Add_Workout_Fails_Because_Name_Is_Null() {
+        // Arrange
+        String email = "carlovankessel@yahoo.nl";
+        String name = null;
+
+        // Assert
+        Assertions.assertThrows(IllegalArgumentException.class, () -> {
+            workoutService.addWorkout(name, email);
+        });
+    }
+
+    @Test
+    @Transactional
+    @TestSecurity(user = "carlovankessel@yahoo.nl", roles = "user")
+    public void When_Add_Workout_Works() {
+        // Arrange
+        String email = "carlovankessel@yahoo.nl";
+        String name = "Test";
+
+        // Act
+        Workout workout = workoutService.addWorkout(name, email);
+
+        // Assert
+        Assertions.assertEquals(name, workout.getName());
+    }
 }
