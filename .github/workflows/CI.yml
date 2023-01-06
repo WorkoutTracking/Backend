@@ -5,7 +5,8 @@ on:
     branches: [ "main" ]
 
 jobs:
-  test:
+  build:
+    name: Build, Test, and SonarCloud
     runs-on: ubuntu-latest
     services:
       keycloak:
