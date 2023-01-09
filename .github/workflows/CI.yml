@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    name: Build, Test, and SonarCloud
+    name: Inteegration, Security and Unit Tests
     runs-on: ubuntu-latest
     services:
       keycloak:
@@ -26,6 +26,11 @@ jobs:
         run: chmod +x ./gradlew
       - name: Build
         run: ./gradlew build
+  sonarcloud:
+    name: SonarCloud
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Cache SonarCloud packages
         uses: actions/cache@v1
         with:
@@ -38,7 +43,7 @@ jobs:
          path: ~/.gradle/caches
          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle') }}
          restore-keys: ${{ runner.os }}-gradle
-      - name: Test, Build and analyze in SonarCloud
+      - name: SonarCloud Scan
         env:
          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         run: ./gradlew jacocoTestReport && ./gradlew build sonarqube --info
