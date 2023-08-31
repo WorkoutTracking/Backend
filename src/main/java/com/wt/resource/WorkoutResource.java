@@ -32,7 +32,7 @@ public class WorkoutResource {
         try {
             List<Workout> workouts = workoutService.allWorkoutsByUser(userEmail);
             if (workouts.isEmpty()) {
-                return Response.status(Response.Status.NOT_FOUND).entity("Warning: You have no workouts").build();
+                return Response.status(Response.Status.NOT_FOUND).entity("Warning: You have no workouts!").build();
             } else {
                 return Response.ok(workouts).build();
             }
