@@ -2,6 +2,9 @@ package com.wt.service;
 
 import com.wt.domain.Exercise;
 import com.wt.repository.ExerciseRepository;
+import io.quarkus.logging.Log;
+import io.quarkus.panache.common.Parameters;
+import io.quarkus.panache.common.Sort;
 import io.quarkus.security.identity.SecurityIdentity;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -36,6 +39,11 @@ public class ExerciseService {
         return exerciseRepository.find("workoutId", workoutId).list();
     }
 
+    public Exercise getLatestAddedExerciseByWorkoutId(UUID workoutId) {
+        return exerciseRepository.find("#Exercise.getByWorkoutIdAndOrderByCreated",
+            Parameters.with("workoutId", workoutId)).firstResult();
+    }
+
     public String addExercise(UUID workoutId, String name, String userEmail) {
         if (!userService.checkIfUserExists(userEmail) || !securityIdentity.getPrincipal().getName().equals(userEmail)) {
             throw new IllegalArgumentException(INVALIDUSER);
@@ -54,6 +62,11 @@ public class ExerciseService {
         } catch (Exception error) {
             return error.getMessage();
         }
+    }
+
+    public Exercise checkIfExerciseNameExists(String userEmail, String name) {
+        return exerciseRepository.find("#Exercise.getByUserAndNameAndOrderByCreated",
+                Parameters.with("userEmail", userEmail).and("name", name)).firstResult();
     }
 
     public String deleteExercise(UUID id, String userEmail) {
