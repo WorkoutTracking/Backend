@@ -3,7 +3,6 @@ package com.wt.service;
 import com.wt.domain.Set;
 import com.wt.repository.SetRepository;
 
-import io.quarkus.logging.Log;
 import io.quarkus.panache.common.Parameters;
 import io.quarkus.security.identity.SecurityIdentity;
 
