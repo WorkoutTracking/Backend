@@ -18,10 +18,10 @@ import static org.hamcrest.CoreMatchers.not;
 @TestHTTPEndpoint(WorkoutResource.class)
 public class WorkoutResourceTest {
     @Test
-    @TestSecurity(user = "carlovankessel@yahoo.nl", roles = "user")
+    @TestSecurity(user = "admin@gmail.nl", roles = "user")
     public void When_Get_Workouts_Not_Empty() {
         given()
-                .when().get("/user/carlovankessel@yahoo.nl")
+                .when().get("/user/admin@gmail.nl")
                 .then()
                 .statusCode(RestResponse.StatusCode.OK)
                 .body("size()", not(0));
@@ -29,17 +29,17 @@ public class WorkoutResourceTest {
 
     @Test
     @Transactional
-    @TestSecurity(user = "carlovankessel@yahoo.nl", roles = "user")
+    @TestSecurity(user = "admin@gmail.nl", roles = "user")
     public void When_Post_Workout_Succeeds() {
         given()
                 .header(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON)
                 .header(HttpHeaders.ACCEPT, MediaType.APPLICATION_JSON)
-                .when().post("/" + "Legs" + "/" + "carlovankessel@yahoo.nl")
+                .when().post("/" + "Legs" + "/" + "admin@gmail.nl")
                 .then()
                 .statusCode(201);
 
         given()
-                .when().get("/user/carlovankessel@yahoo.nl")
+                .when().get("/user/admin@gmail.nl")
                 .then()
                 .statusCode(200)
                 .body("$.size()", is(3));
