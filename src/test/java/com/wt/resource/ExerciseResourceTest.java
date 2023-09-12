@@ -14,7 +14,7 @@ import static org.hamcrest.CoreMatchers.not;
 public class ExerciseResourceTest {
 
     @Test
-    @TestSecurity(user = "carlovankessel@yahoo.nl", roles = "user")
+    @TestSecurity(user = "admin@gmail.nl", roles = "user")
     public void When_Get_Exercises_Not_Empty() {
         given()
                 .when().get()
