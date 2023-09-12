@@ -20,7 +20,7 @@ public class ExerciseServiceTest {
     @TestSecurity(user = "admin@yahoo.nl", roles = "user")
     public void When_Get_Exercises_By_Workout_And_User_Fails_Because_TokenEmail_And_Email_Arent_From_The_Same_User() {
         // Arrange
-        String email = "carlovankessel@yahoo.nl";
+        String email = "admin@gmail.nl";
         UUID workoutId = UUID.fromString("32b5646c-cecb-4518-ae17-bcd296990db7");
 
         // Assert
