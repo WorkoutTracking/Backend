@@ -17,10 +17,10 @@ public class WorkoutServiceTest {
     WorkoutService workoutService;
 
     @Test
-    @TestSecurity(user = "carlovankessel@yahoo.nl", roles = "user")
+    @TestSecurity(user = "admin@gmail.nl", roles = "user")
     public void When_Get_Workouts_By_User_Is_More_Than_Zero() {
         // Arrange
-        String email = "carlovankessel@yahoo.nl";
+        String email = "admin@gmail.nl";
         int lowestSize = 0;
 
         // Act
@@ -31,7 +31,7 @@ public class WorkoutServiceTest {
     }
 
     @Test
-    @TestSecurity(user = "carlovankessel@yahoo.nl", roles = "user")
+    @TestSecurity(user = "admin@gmail.nl", roles = "user")
     public void When_Get_Workouts_Throws_Exception_Because_TokenEmail_And_Email_Arent_From_The_Same_User() {
         // Arrange
         String email = "admin@gmail.com";
@@ -44,10 +44,10 @@ public class WorkoutServiceTest {
 
     @Test
     @Transactional
-    @TestSecurity(user = "carlovankessel@yahoo.nl", roles = "user")
+    @TestSecurity(user = "admin@gmail.nl", roles = "user")
     public void When_Add_Workout_Fails_Because_Name_Is_Null() {
         // Arrange
-        String email = "carlovankessel@yahoo.nl";
+        String email = "admin@gmail.nl";
         String name = null;
 
         // Assert
@@ -58,10 +58,10 @@ public class WorkoutServiceTest {
 
     @Test
     @Transactional
-    @TestSecurity(user = "carlovankessel@yahoo.nl", roles = "user")
+    @TestSecurity(user = "admin@gmail.nl", roles = "user")
     public void When_Add_Workout_Works() {
         // Arrange
-        String email = "carlovankessel@yahoo.nl";
+        String email = "admin@gmail.nl";
         String name = "Test";
 
         // Act
