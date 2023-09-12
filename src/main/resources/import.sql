@@ -1,8 +1,8 @@
-INSERT INTO useraccount (id, createdAt, name, email) VALUES ('473cc7ef-f4a8-4325-bda5-a4847938313c', CURRENT_TIMESTAMP, 'Carlo', 'carlovankessel@yahoo.nl');
+INSERT INTO useraccount (id, createdAt, name, email) VALUES ('473cc7ef-f4a8-4325-bda5-a4847938313c', CURRENT_TIMESTAMP, 'Carlo', 'admin@gmail.nl');
 
-INSERT INTO workout (id, createdAt, userEmail, name) VALUES ('32b5646c-cecb-4518-ae17-bcd296990db7', CURRENT_TIMESTAMP, 'carlovankessel@yahoo.nl', 'Push');
-INSERT INTO workout (id, createdAt, userEmail, name) VALUES ('d0e244ce-bd2f-4a30-b467-f3930f37e4dc', CURRENT_TIMESTAMP, 'carlovankessel@yahoo.nl', 'Pull');
-INSERT INTO workout (id, createdAt, userEmail, name) VALUES ('5498f676-d9ec-4dba-9e16-164dc782bfa5', CURRENT_TIMESTAMP, 'carlovankessel@yahoo.nl', 'Legs');
+INSERT INTO workout (id, createdAt, userEmail, name) VALUES ('32b5646c-cecb-4518-ae17-bcd296990db7', CURRENT_TIMESTAMP, 'admin@gmail.nl', 'Push');
+INSERT INTO workout (id, createdAt, userEmail, name) VALUES ('d0e244ce-bd2f-4a30-b467-f3930f37e4dc', CURRENT_TIMESTAMP, 'admin@gmail.nl', 'Pull');
+INSERT INTO workout (id, createdAt, userEmail, name) VALUES ('5498f676-d9ec-4dba-9e16-164dc782bfa5', CURRENT_TIMESTAMP, 'admin@gmail.nl', 'Legs');
 
 INSERT INTO exercise (id, createdAt, workoutId, name) VALUES ('120ccfcf-f7ad-424a-82d2-8d0b375c8a6e', CURRENT_TIMESTAMP, '32b5646c-cecb-4518-ae17-bcd296990db7', 'Barbell Bench Press');
 INSERT INTO exercise (id, createdAt, workoutId, name) VALUES ('7fd0d588-5769-4ba1-ba09-d0aeb2a1e39c', CURRENT_TIMESTAMP, '32b5646c-cecb-4518-ae17-bcd296990db7', 'Incline Dumbbell Press');
